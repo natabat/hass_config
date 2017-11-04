@@ -71,3 +71,7 @@ panel_iframe:
     title: 'Terminal'
     icon: mdi:console
     url: 'http://192.168.0.107:4200'
+
+zwave:
+  usb_path: /dev/zwave
+  network_key: !secret zwave_key
