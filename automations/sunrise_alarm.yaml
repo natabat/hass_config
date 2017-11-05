@@ -1,0 +1,33 @@
+alias: Sunrise Alarm
+trigger:
+  - platform: event
+    event_type: SUNRISE_LOOP
+  - platform: time
+    at: '04:45'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      weekday:
+        - mon
+        - tue
+        - wed
+        - thu
+        - fri
+    - condition: state
+      entity_id: automation.sunrise_alarm
+      state: 'on'
+    - condition: or
+      conditions:
+        - condition: state
+          entity_id: light.bedroom_lights_level
+          state: 'off'
+        - condition: template
+          value_template: '{{states.light.bedroom_lights_level.attributes.brightness <= 245}}'
+action:
+  - service: python_script.light_step
+    data:
+      entity_id: light.bedroom_lights_level
+      step: 10
+  - delay: 00:00:10
+  - event: SUNRISE_LOOP

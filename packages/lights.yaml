@@ -1,0 +1,62 @@
+group:
+  morning_lights:
+    name: Morning Lights
+    view: no
+    icon: mdi:blur
+    entities:
+      - light.awkward_lights_level
+      - switch.entry_lights_door
+      - light.kitchen_lights_level
+  lights:
+    name: Lights
+    view: no
+    icon: mdi:blur
+    entities:
+      - light.awkward_lights_level
+      - light.bedroom_lights_level
+      - light.dining_room_lights_level
+      - switch.entry_lights_door
+      - switch.entry_lights_porch
+      - light.kitchen_lights_level
+      - light.living_room_lights_level
+      - switch.patio_light_switch
+
+homeassistant:
+  customize:
+    light.awkward_lights_level:
+      friendly_name: Awkward Lights
+      icon: mdi:untappd
+      emulated_hue_hidden: false
+    light.bedroom_lights_level:
+      friendly_name: Bedroom Lights
+      icon: mdi:hotel
+      emulated_hue_hidden: false
+    light.dining_room_lights_level:
+      friendly_name: Dining Room Lights
+      icon: mdi:food
+      emulated_hue_hidden: false
+    switch.entry_lights_switch:
+      friendly_name: Entry Lights
+      icon: mdi:home-variant
+      emulated_hue_hidden: false
+    switch.entry_lights_door:
+      friendly_name: Door Lights
+      icon: mdi:human-greeting
+    switch.entry_lights_porch:
+      friendly_name: Porch Light
+      icon: mdi:castle
+    switch.holiday_lights:
+      icon: mdi:pine-tree
+      emulated_hue_hidden: false
+    light.kitchen_lights_level:
+      friendly_name: Kitchen Lights
+      icon: mdi:water-pump
+      emulated_hue_hidden: false
+    light.living_room_lights_level:
+      friendly_name: Living Room Lights
+      icon: mdi:sofa
+      emulated_hue_hidden: false
+    switch.patio_light_switch:
+      friendly_name: Patio Light
+      icon: mdi:tree
+      emulated_hue_hidden: false

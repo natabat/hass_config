@@ -1,69 +1,30 @@
 homeassistant:
-  # Name of the location where Home Assistant is running
-  name: Fiddlers Green
-  # Location required to calculate the time the sun rises and sets
-  latitude: 32.8561
-  longitude: -116.9968
-  # Impacts weather/sunrise data (altitude above sea level in meters)
-  elevation: 143
-  # metric for Metric, imperial for Imperial
-  unit_system: imperial
-  # Pick yours from here: http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
-  time_zone: America/Los_Angeles
-  # Customization file
+  name: !secret home_name
+  latitude: !secret home_lat
+  longitude: !secret home_lon
+  elevation: !secret home_elev
+  unit_system: !secret home_units
+  time_zone: !secret home_time_zone
+
   customize: !include customize.yaml
-
-# Enables the frontend
-frontend:
-
-# Enables configuration UI
-config:
-
-http:
-  # Secrets are defined in the file secrets.yaml
-  api_password: !secret http_password
-  # Uncomment this if you are using SSL/TLS, running in Docker container, etc.
-  # base_url: example.duckdns.org:8123
-
-# Checks for available updates
-# Note: This component will send some information about your system to
-# the developers to assist with development of Home Assistant.
-# For more information, please see:
-# https://home-assistant.io/blog/2016/10/25/explaining-the-updater/
-updater:
-  # Optional, allows Home Assistant developers to focus on popular components.
-  # include_used_components: true
-
-# Discover some devices automatically
-discovery:
-
-# Allows you to issue voice commands from the frontend in enabled browsers
-# conversation:
-
-# Enables support for tracking state changes over time
-history:
-
-# View all events in a logbook
-logbook:
-
-# Enables a map showing the location of tracked devices
-map:
-
-# Track the sun
-sun:
+  packages:  !include_dir_named packages
 
 # Weather prediction
 sensor:
   - platform: yr
 
-# Text to speech
-#tts:
-#  - platform: google
-
 group: !include groups.yaml
+group dir: !include_dir_merge_named groups
 automation: !include automations.yaml
+automation dir: !include_dir_list automations
 script: !include scripts.yaml
 
+input_datetime:
+  sunrise_alarm_time:
+    name: Sunrise Lights Start Time
+    has_date: false
+    has_time: true
+    initial: '1970-01-01 04:45'
 
 # for the ssh panel
 panel_iframe:
@@ -72,6 +33,18 @@ panel_iframe:
     icon: mdi:console
     url: 'http://192.168.0.107:4200'
 
-zwave:
-  usb_path: /dev/zwave
-  network_key: !secret zwave_key
+zwave: !include zwave.yaml
+# enable the basics
+frontend:
+config:
+http:
+  api_password: !secret http_password
+updater:
+discovery:
+history:
+logbook:
+sun:
+emulated_hue:
+  expose_by_default: false
+python_script:
+
