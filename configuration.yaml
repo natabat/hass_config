@@ -14,10 +14,17 @@ sensor:
   - platform: yr
 
 group: !include groups.yaml
-group dir: !include_dir_merge_named groups
+group dir: !include_dir_list groups
 automation: !include automations.yaml
 automation dir: !include_dir_list automations
 script: !include scripts.yaml
+
+device_tracker:
+  platform: nmap_tracker
+  hosts: 192.168.0.200-210
+  home_interval: 20
+  track_new_devices: False
+  consider_home: 0:10:00
 
 input_datetime:
   sunrise_alarm_time:

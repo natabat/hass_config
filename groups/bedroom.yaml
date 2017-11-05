@@ -1,0 +1,5 @@
+view: yes
+entities:
+  light.bedroom_lights_level
+  automation.sunrise_alarm
+  input_datetime.sunrise_alarm_time

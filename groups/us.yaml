@@ -1,0 +1,6 @@
+us:
+  name: Us
+  view: no
+  entities:
+    - device_tracker.natalie
+    - device_tracker.cassidy

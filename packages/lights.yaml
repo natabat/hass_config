@@ -7,6 +7,14 @@ group:
       - light.awkward_lights_level
       - switch.entry_lights_door
       - light.kitchen_lights_level
+  sunset_lights:
+    name: Sunset Lights
+    view: no
+    icon: mdi:blur
+    entities:
+      - light.awkward_lights_level
+      - light.kitchen_lights_level
+      - light.living_lights_level
   lights:
     name: Lights
     view: no
@@ -20,6 +28,10 @@ group:
       - light.kitchen_lights_level
       - light.living_room_lights_level
       - switch.patio_light_switch
+      
+device_sun_light_trigger:
+  light_group: group.sunset_lights
+  device_group: group.us
 
 homeassistant:
   customize:
