@@ -6,52 +6,43 @@ homeassistant:
   unit_system: !secret home_units
   time_zone: !secret home_time_zone
 
-  customize: !include customize.yaml
-  packages:  !include_dir_named packages
+  customize: !include_dir_merge_named customizations
 
-# Weather prediction
-sensor:
-  - platform: yr
-
-group: !include groups.yaml
-group dir: !include_dir_list groups
 automation: !include automations.yaml
 automation dir: !include_dir_list automations
-script: !include scripts.yaml
-
-device_tracker:
-  platform: nmap_tracker
-  hosts: 192.168.0.200-210
-  home_interval: 20
-  track_new_devices: False
-  consider_home: 0:10:00
-
+device_tracker: !include device_tracker.yaml
+device_sun_light_trigger:
+  light_group: group.sunset_lights
+  device_group: group.us
+group: !include_dir_merge_named groups/
 input_datetime:
   sunrise_alarm_time:
     name: Sunrise Lights Start Time
     has_date: false
     has_time: true
     initial: '1970-01-01 04:45'
-
-# for the ssh panel
-panel_iframe:
-  terminal:
-    title: 'Terminal'
-    icon: mdi:console
-    url: 'http://192.168.0.107:4200'
-
+#nest:
+#  client_id: !secret nest_id
+#  client_secret: !secret nest_secret
+notify: !include notify.yaml
+panel_iframe: !include panels.yaml
+script: !include scripts.yaml
+sensor:
+  - platform: yr
 zwave: !include zwave.yaml
+
 # enable the basics
-frontend:
 config:
-http:
-  api_password: !secret http_password
-updater:
 discovery:
-history:
-logbook:
-sun:
 emulated_hue:
   expose_by_default: false
+frontend:
+history:
+http:
+  api_password: !secret http_password
+logbook:
 python_script:
-
+recorder:
+  db_url: !secret db_url
+sun:
+updater:

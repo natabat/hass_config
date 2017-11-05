@@ -1,0 +1,6 @@
+alarm:
+  name: Alarm
+  view: no
+  entities:
+    - automation.sunrise_alarm
+    - input_datetime.sunrise_alarm_time

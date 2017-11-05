@@ -1,0 +1,14 @@
+default_view:
+  name: Main
+  view: yes
+  entities:
+    - device_tracker.natalie
+    - device_tracker.cassidy
+    - group.lights
+    - group.front_door
+bedroom:
+  name: Bedroom
+  view: yes
+  entities:
+    - light.bedroom_lights_level
+    - group.alarm
