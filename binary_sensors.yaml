@@ -1,0 +1,7 @@
+- platform: template
+  sensors:
+    front_door_unlocked:
+      friendly_name: Door
+      entity_id: lock.front_door_locked
+      device_class: safety
+      value_template: "{{ is_state('lock.front_door_locked', 'unlocked') }}"

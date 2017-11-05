@@ -10,6 +10,7 @@ homeassistant:
 
 automation: !include automations.yaml
 automation dir: !include_dir_list automations
+binary_sensor: !include binary_sensors.yaml
 device_tracker: !include device_tracker.yaml
 device_sun_light_trigger:
   light_group: group.sunset_lights
@@ -27,8 +28,7 @@ input_datetime:
 notify: !include notify.yaml
 panel_iframe: !include panels.yaml
 script: !include scripts.yaml
-sensor:
-  - platform: yr
+sensor: !include sensors.yaml
 zwave: !include zwave.yaml
 
 # enable the basics

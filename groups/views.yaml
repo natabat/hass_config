@@ -4,6 +4,7 @@ default_view:
   entities:
     - device_tracker.natalie
     - device_tracker.cassidy
+    - binary_sensor.front_door_unlocked
     - group.lights
     - group.front_door
 bedroom:
