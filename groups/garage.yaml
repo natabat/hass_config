@@ -1,0 +1,8 @@
+garage:
+  name: Garage
+  view: no
+  control: hidden
+  entities:
+    - cover.garage
+    - sensor.garage_status
+    - sensor.garage_car_present 

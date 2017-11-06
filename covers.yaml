@@ -1,0 +1,6 @@
+- platform: opengarage
+  covers:
+      garage:        
+        host: 192.168.0.113
+        device_key: !secret opengarage_key
+        name: garage

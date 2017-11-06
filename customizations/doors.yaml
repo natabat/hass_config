@@ -1,0 +1,6 @@
+lock.front_door_locked:
+  friendly_name: Front Door Lock
+cover.garage:
+  friendly_name: Garage
+script.shut_it_down:
+  friendly_name: Shut It Down

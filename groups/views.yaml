@@ -7,6 +7,9 @@ default_view:
     - binary_sensor.front_door_unlocked
     - group.lights
     - group.front_door
+    - group.garage
+    - script.shut_it_down
+    - switch.feeder
 bedroom:
   name: Bedroom
   view: yes

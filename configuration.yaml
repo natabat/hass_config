@@ -11,6 +11,7 @@ homeassistant:
 automation: !include automations.yaml
 automation dir: !include_dir_list automations
 binary_sensor: !include binary_sensors.yaml
+cover: !include covers.yaml
 device_tracker: !include device_tracker.yaml
 device_sun_light_trigger:
   light_group: group.sunset_lights
@@ -22,12 +23,13 @@ input_datetime:
     has_date: false
     has_time: true
     initial: '1970-01-01 04:45'
+light: !include lights.yaml
 #nest:
 #  client_id: !secret nest_id
 #  client_secret: !secret nest_secret
 notify: !include notify.yaml
 panel_iframe: !include panels.yaml
-script: !include scripts.yaml
+script: !include_dir_named scripts
 sensor: !include sensors.yaml
 zwave: !include zwave.yaml
 
