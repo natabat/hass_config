@@ -18,12 +18,7 @@ device_sun_light_trigger:
   light_group: group.sunset_lights
   device_group: group.us
 group: !include_dir_merge_named groups/
-input_datetime:
-  sunrise_alarm_time:
-    name: Sunrise Lights Start Time
-    has_date: false
-    has_time: true
-    initial: '1970-01-01 04:45'
+input_datetime: !include datetimes.yaml
 light: !include lights.yaml
 #nest:
 #  client_id: !secret nest_id

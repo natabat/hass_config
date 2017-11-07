@@ -2,8 +2,8 @@ alias: Sunrise Alarm
 trigger:
   - platform: event
     event_type: SUNRISE_LOOP
-  - platform: time
-    at: '04:45'
+  - platform: template
+    value_template: '{{ states.sensor.time.state == (states.input_datetime.sunrise_alarm_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
 condition:
   condition: and
   conditions:
@@ -17,6 +17,9 @@ condition:
     - condition: state
       entity_id: automation.sunrise_alarm
       state: 'on'
+    - condition: state
+      entity_id: group.us
+      state: home
     - condition: or
       conditions:
         - condition: state

@@ -1,0 +1,11 @@
+sunrise_alarm_time:
+  name: Sunrise Lights Start Time
+  has_date: false
+  has_time: true
+  initial: '1970-01-01 04:45'
+morning_lights_time:
+  name: Morning Lights Time
+  has_date: false
+  has_time: true
+  initial: '1970-01-01 05:00'
+  

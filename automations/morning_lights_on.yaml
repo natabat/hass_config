@@ -1,0 +1,19 @@
+alias: Morning Lights On
+initial_state: True
+trigger:
+  - platform: template
+    value_template: '{{ states.sensor.time.state == (states.input_datetime.morning_lights_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
+condition:
+  - condition: time
+    weekday:
+      - mon
+      - tue
+      - wed
+      - thu
+      - fri
+  - condition: state
+    entity_id: group.us
+    state: home
+action:
+  service: homeassistant.turn_on
+  entity_id: group.morning_lights
