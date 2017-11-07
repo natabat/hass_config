@@ -1,0 +1,8 @@
+- platform: broadlink
+  host: !secret broadlink_ip
+  mac: !secret broadlink_mac
+  switches:
+    stereo:
+      friendly_name: 'Stereo'
+      command_on: 'JgBQAAABJ5ITEhMSExISEhMSExITEhISEzcUNRQ2EzYUNhM2EzYUNhMSExETEhMSExISEhQ2ExITNhM2EzcTNxI3EzYUERM1FQAE9gABJ0sUAA0FAAAAAAAAAAA=='
+      command_off: 'JgBQAAABJ5ITEhMSExISEhMSExITEhISEzcUNRQ2EzYUNhM2EzYUNhMSExETEhMSExISEhQ2ExITNhM2EzcTNxI3EzYUERM1FQAE9gABJ0sUAA0FAAAAAAAAAAA=='

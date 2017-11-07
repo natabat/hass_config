@@ -1,0 +1,95 @@
+# automation: see automations directory: tv_on
+
+group:
+  tv:
+    name: TV Commands
+    view: yes
+    entities:
+      - input_boolean.tv
+      - script.hulu
+      - script.broadcast
+      - script.steam
+      - script.prime
+      - script.nintendo_switch
+      - script.netflix
+
+input_boolean:
+  tv:
+    name: TV
+
+rest_command:
+  roku_ok:
+    url: 'http://192.168.0.109:8060/keypress/select'
+    method: 'post' 
+  tv_power:
+    url: 'http://192.168.0.109:8060/keypress/Power'
+    method: 'post'
+  tv_input_hdmi1:
+    url: 'http://192.168.0.109:8060/keypress/InputHDMI1'
+    method: 'post'
+  tv_input_hdmi2:
+    url: 'http://192.168.0.109:8060/keypress/InputHDMI2'
+    method: 'post'
+  tv_input_tuner:
+    url: 'http://192.168.0.109:8060/keypress/InputTuner'
+    method: 'post'
+
+script:
+  broadcast:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: rest_command.tv_input_tuner
+  hulu:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.living_room
+          source: "Hulu"
+  netflix:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.living_room
+          source: "Netflix"
+  nintendo_switch:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: rest_command.tv_input_hdmi1
+  tv_power:
+    sequence:
+      - service: wake_on_lan.send_magic_packet
+        data:
+          mac: !secret tv_mac
+      - service: switch.toggle
+        data:
+          entity_id: switch.stereo
+      - service: rest_command.tv_power
+  prime:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: media_player.select_source
+        data:
+          entity_id: media_player.living_room
+          source: "Amazon Video"
+  steam:
+    sequence:
+      - service: input_boolean.turn_on
+        data:
+          entity_id: input_boolean.tv
+      - service: rest_command.tv_input_hdmi2
+
+# switch: see main switches.yaml. Can't get the syntax right here for some reason
+
+wake_on_lan:

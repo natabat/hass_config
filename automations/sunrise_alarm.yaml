@@ -28,6 +28,6 @@ action:
   - service: python_script.light_step
     data:
       entity_id: light.bedroom_lights_level
-      step: 10
-  - delay: 00:00:10
+      step: 2
+  - delay: 00:00:08
   - event: SUNRISE_LOOP
