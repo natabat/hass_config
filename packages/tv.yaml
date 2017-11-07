@@ -1,37 +1,27 @@
 # automation: see automations directory: tv_on
 
-group:
-  tv:
-    name: TV Commands
-    view: yes
-    entities:
-      - input_boolean.tv
-      - script.hulu
-      - script.broadcast
-      - script.steam
-      - script.prime
-      - script.nintendo_switch
-      - script.netflix
-
 input_boolean:
   tv:
     name: TV
 
 rest_command:
   roku_ok:
-    url: 'http://192.168.0.109:8060/keypress/select'
+    url: 'http://192.168.0.111:8060/keypress/select'
     method: 'post' 
   tv_power:
-    url: 'http://192.168.0.109:8060/keypress/Power'
+    url: 'http://192.168.0.111:8060/keypress/Power'
     method: 'post'
   tv_input_hdmi1:
-    url: 'http://192.168.0.109:8060/keypress/InputHDMI1'
+    url: 'http://192.168.0.111:8060/keypress/InputHDMI1'
     method: 'post'
   tv_input_hdmi2:
-    url: 'http://192.168.0.109:8060/keypress/InputHDMI2'
+    url: 'http://192.168.0.111:8060/keypress/InputHDMI2'
     method: 'post'
   tv_input_tuner:
-    url: 'http://192.168.0.109:8060/keypress/InputTuner'
+    url: 'http://192.168.0.111:8060/keypress/InputTuner'
+    method: 'post'
+  tv_find_remote:
+    url: 'http://192.168.0.111:8060/keypress/FindRemote'
     method: 'post'
 
 script:

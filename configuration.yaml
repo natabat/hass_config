@@ -18,8 +18,13 @@ device_sun_light_trigger:
   light_group: group.sunset_lights
   device_group: group.us
 group: !include_dir_merge_named groups/
+input_boolean: !include booleans.yaml
 input_datetime: !include datetimes.yaml
+intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
+media_player:
+  - platform: roku
+    host: 192.168.0.111
 #nest:
 #  client_id: !secret nest_id
 #  client_secret: !secret nest_secret
@@ -32,6 +37,7 @@ switch: !include switches.yaml
 zwave: !include zwave.yaml
 
 # enable the basics
+alexa:
 config:
 discovery:
 emulated_hue:

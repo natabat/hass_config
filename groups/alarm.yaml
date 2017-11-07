@@ -4,3 +4,4 @@ alarm:
   entities:
     - automation.sunrise_alarm
     - input_datetime.sunrise_alarm_time
+    - input_datetime.morning_lights_time

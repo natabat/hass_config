@@ -1,0 +1,109 @@
+# shut it down
+amzn1.ask.skill.cd365ac0-9b13-4578-8394-03bd21b277b9:
+  action:
+    service: script.turn_on
+    data:
+      entity_id: script.shut_it_down
+  speech:
+    type: plain
+    text: "Good night!"
+# Dexter has food
+amzn1.ask.skill.4075aedd-0d72-4e89-a1af-3413318b335e:
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.cat_meal
+  speech:
+    type: plain
+    text: "I'm sure he's a happy kitty"
+# Didi has food
+amzn1.ask.skill.2f087055-e3ef-4aa2-a382-29d80f05cee8:
+  action:
+    service: input_boolean.turn_off
+    data:
+      entity_id: input_boolean.dog_meal
+  speech:
+    type: plain
+    text: "Nom nom"
+# Open garage door
+amzn1.ask.skill.e25086f5-53fa-4828-92e2-6dcc5e719d00:
+  action:
+    service: cover.open_cover
+    data:
+      entity_id: cover.garage
+  speech:
+    type: plain
+    text: "As you wish"
+# Close garage door
+amzn1.ask.skill.801cb9ac-e664-4c34-ae4a-6f6911c6f8eb:
+  action:
+    service: cover.close_cover
+    data:
+      entity_id: cover.garage
+  speech:
+    type: plain
+    text: "As you wish"
+# Pause roku
+amzn1.ask.skill.3d9ec356-6a32-4799-9235-ea2f499fffa9:
+  action:
+    service: media_player.media_play_pause
+    data:
+      entity_id: media_player.living_room
+  speech:
+    type: plain
+    text: OK
+# Roku continue
+amzn1.ask.skill.e912fcc1-0a28-426f-a137-ad3f60a821dd:
+  action:
+    service: media_player.media_play_pause
+    data:
+      entity_id: media_player.living_room
+  speech:
+    type: plain
+    text: Enjoy
+# Lock the door
+amzn1.ask.skill.c3e3f6dd-e8de-4a64-82a3-f115568255f4:
+  action:
+    service: lock.lock
+    data:
+      entity_id: lock.front_door_locked
+  speech:
+    type: plain
+    text: Secured
+# Unlock the door
+amzn1.ask.skill.8f1f760e-5984-44b7-94d4-acebe4026829:
+  action:
+    service: lock.unlock
+    data:
+      entity_id: lock.front_door_locked
+  speech:
+    type: plain
+    text: Unlocked
+# garage toggle
+#amzn1.ask.skill.99b4df7b-148c-45af-b6be-62d6a5c3811b:
+#  action:
+#    service: rest_command.garage_button
+#  speech:
+#    type: plain
+#    text: Sure thing!
+CheckGarageIntent:
+  speech:
+    type: plain
+    text: The garage is {{ states("sensor.garage_status") }}
+OpenGarageIntent:
+  action:
+    service: cover.open_cover
+    data:
+      entity_id: cover.garage
+  speech:
+    type: plain
+    text: As you wish
+CloseGarageIntent:
+  action:
+    service: cover.close_cover
+    data:
+      entity_id: cover.garage
+  speech:
+    type: plain
+    text: As you wish
+

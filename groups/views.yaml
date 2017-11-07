@@ -9,10 +9,22 @@ default_view:
     - group.front_door
     - group.garage
     - script.shut_it_down
-    - switch.feeder
+    - group.animals
 bedroom:
   name: Bedroom
   view: yes
   entities:
     - light.bedroom_lights_level
     - group.alarm
+tv:
+  name: TV Commands
+  view: yes
+  entities:
+    - input_boolean.tv
+    - script.hulu
+    - script.broadcast
+    - script.steam
+    - script.prime
+    - script.nintendo_switch
+    - script.netflix
+    - rest_command.find_remote
