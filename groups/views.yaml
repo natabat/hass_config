@@ -27,4 +27,4 @@ tv:
     - script.prime
     - script.nintendo_switch
     - script.netflix
-    - rest_command.find_remote
+    - script.find_remote

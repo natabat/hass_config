@@ -2,7 +2,7 @@ alias: Morning Lights On
 initial_state: True
 trigger:
   - platform: template
-    value_template: '{{ states.sensor.time.state == (states.input_datetime.morning_lights_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
+    value_template: '{{ now().strftime("%-H:%M") == (states.input_datetime.morning_lights_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
 condition:
   - condition: time
     weekday:

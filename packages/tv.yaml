@@ -31,6 +31,9 @@ script:
         data:
           entity_id: input_boolean.tv
       - service: rest_command.tv_input_tuner
+  find_remote:
+    sequence:
+      - service: rest_command.tv_find_remote
   hulu:
     sequence:
       - service: input_boolean.turn_on
@@ -55,15 +58,6 @@ script:
         data:
           entity_id: input_boolean.tv
       - service: rest_command.tv_input_hdmi1
-  tv_power:
-    sequence:
-      - service: wake_on_lan.send_magic_packet
-        data:
-          mac: !secret tv_mac
-      - service: switch.toggle
-        data:
-          entity_id: switch.stereo
-      - service: rest_command.tv_power
   prime:
     sequence:
       - service: input_boolean.turn_on
@@ -73,6 +67,15 @@ script:
         data:
           entity_id: media_player.living_room
           source: "Amazon Video"
+  tv_power:
+    sequence:
+      - service: wake_on_lan.send_magic_packet
+        data:
+          mac: !secret tv_mac
+      - service: switch.toggle
+        data:
+          entity_id: switch.stereo
+      - service: rest_command.tv_power
   steam:
     sequence:
       - service: input_boolean.turn_on

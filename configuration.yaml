@@ -22,9 +22,9 @@ input_boolean: !include booleans.yaml
 input_datetime: !include datetimes.yaml
 intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
-media_player:
-  - platform: roku
-    host: 192.168.0.111
+#media_player:
+#  - platform: roku
+#    host: 192.168.0.111
 #nest:
 #  client_id: !secret nest_id
 #  client_secret: !secret nest_secret
@@ -52,3 +52,8 @@ recorder:
   db_url: !secret db_url
 sun:
 updater:
+
+logger:
+  default: info
+  logs:
+    homeassistant.components.script: debug

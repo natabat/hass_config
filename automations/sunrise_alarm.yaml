@@ -3,7 +3,7 @@ trigger:
   - platform: event
     event_type: SUNRISE_LOOP
   - platform: template
-    value_template: '{{ states.sensor.time.state == (states.input_datetime.sunrise_alarm_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
+    value_template: '{{ now().strftime("%-H:%M") == (states.input_datetime.sunrise_alarm_time.attributes.timestamp | int | timestamp_custom("%H:%M", False)) }}'
 condition:
   condition: and
   conditions:
@@ -14,23 +14,19 @@ condition:
         - wed
         - thu
         - fri
+        - sat
     - condition: state
       entity_id: automation.sunrise_alarm
       state: 'on'
     - condition: state
       entity_id: group.us
       state: home
-    - condition: or
-      conditions:
-        - condition: state
-          entity_id: light.bedroom_lights_level
-          state: 'off'
-        - condition: template
-          value_template: '{{states.light.bedroom_lights_level.attributes.brightness <= 245}}'
+    - condition: template
+      value_template: '{{states.light.bedroom_lights_level.attributes.brightness <= 245}}'
 action:
   - service: python_script.light_step
     data:
       entity_id: light.bedroom_lights_level
-      step: 2
+      step: 1
   - delay: 00:00:08
   - event: SUNRISE_LOOP

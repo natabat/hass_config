@@ -73,9 +73,7 @@ amzn1.ask.skill.c3e3f6dd-e8de-4a64-82a3-f115568255f4:
 # Unlock the door
 amzn1.ask.skill.8f1f760e-5984-44b7-94d4-acebe4026829:
   action:
-    service: lock.unlock
-    data:
-      entity_id: lock.front_door_locked
+    service: script.safe_unlock
   speech:
     type: plain
     text: Unlocked
@@ -107,3 +105,13 @@ CloseGarageIntent:
     type: plain
     text: As you wish
 
+
+# Fiddlers Green Find the Remote
+amzn1.ask.skill.80d902d6-67f1-44a4-81ee-9fdeabd1623e:
+  action:
+    service: rest_command.tv_find_remote
+    data:
+      entity_id: 
+  speech:
+    type: plain
+    text: Found it!
