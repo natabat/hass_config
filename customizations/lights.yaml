@@ -15,7 +15,7 @@ switch.entry_lights_switch:
   icon: mdi:home-variant
   emulated_hue_hidden: false
 switch.entry_lights_door:
-  friendly_name: Door Lights
+  friendly_name: Door Light
   icon: mdi:human-greeting
 switch.entry_lights_porch:
   friendly_name: Porch Light

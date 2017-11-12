@@ -6,3 +6,4 @@ front_door:
     - lock.front_door_locked
     - switch.entry_lights_door
     - switch.entry_lights_porch
+    - light.porch_bulb
