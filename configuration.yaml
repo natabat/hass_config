@@ -22,9 +22,6 @@ input_boolean: !include booleans.yaml
 input_datetime: !include datetimes.yaml
 intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
-#media_player:
-#  - platform: roku
-#    host: 192.168.0.111
 #nest:
 #  client_id: !secret nest_id
 #  client_secret: !secret nest_secret
@@ -40,9 +37,13 @@ zwave: !include zwave.yaml
 alexa:
 config:
 discovery:
+  ignore:
+    - roku
 emulated_hue:
   expose_by_default: false
 frontend:
+  extra_html_url:
+    - /local/custom_ui/state_card_tiles.html
 history:
 http:
   api_password: !secret http_password

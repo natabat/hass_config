@@ -21,6 +21,8 @@ tv:
   view: yes
   entities:
     - input_boolean.tv
+    - binary_sensor.tv_ping
+    - binary_sensor.tv_status
     - script.hulu
     - script.broadcast
     - script.steam
@@ -28,3 +30,7 @@ tv:
     - script.nintendo_switch
     - script.netflix
     - script.find_remote
+    - switch.stereo_up
+    - switch.stereo_down
+    - switch.stereo_mute
+    

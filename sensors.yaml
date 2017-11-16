@@ -32,3 +32,6 @@
           {% else %}
           n/a
           {% endif %}'
+- platform: time_date
+  display_options:
+    - 'time'

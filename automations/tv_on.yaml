@@ -1,6 +1,0 @@
-alias: TV On
-trigger:
-  platform: state
-  entity_id: input_boolean.tv
-action:
-  service: script.tv_power
