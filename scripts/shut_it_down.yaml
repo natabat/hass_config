@@ -1,11 +1,12 @@
-sequence:
-  - service: lock.lock
-    entity_id: lock.front_door_locked
-  - service: homeassistant.turn_off
-    entity_id: group.lights
-  #- service: homeassistant.turn_off
-  #  entity_id: input_boolean.tv
-  # - service: input_boolean.turn_on
-    # entity_id: input_boolean.door_cam_motion
-  - service: cover.close_cover
-    entity_id: cover.garage
+shut_it_down:
+  sequence:
+    - service: lock.lock
+      entity_id: lock.front_door_locked
+    - service: homeassistant.turn_off
+      entity_id: group.lights
+    - service: homeassistant.turn_off
+      entity_id: input_boolean.tv
+    # - service: input_boolean.turn_on
+      # entity_id: input_boolean.door_cam_motion
+    - service: cover.close_cover
+      entity_id: cover.garage

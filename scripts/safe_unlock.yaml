@@ -1,7 +1,8 @@
-sequence:
-  - condition: state
-    entity_id: group.us
-    state: 'home'
-  - service: lock.unlock
-    data:
-      entity_id: lock.front_door_locked
+safe_unlock:
+  sequence:
+    - condition: state
+      entity_id: group.us
+      state: 'home'
+    - service: lock.unlock
+      data:
+        entity_id: lock.front_door_locked

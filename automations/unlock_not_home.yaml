@@ -1,0 +1,16 @@
+alias: "Notify on Unlock"
+initial_state: True
+hide_entity: True
+trigger:
+  platform: state
+  entity_id: lock.front_door_locked
+  from: 'locked'
+  to: 'unlocked'
+condition:
+  condition: state
+  entity_id: group.us
+  state: 'not_home'
+action:
+  service: notify.natalie
+  data:
+    message: Your door unlocked, but no one is home!

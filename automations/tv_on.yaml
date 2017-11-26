@@ -1,0 +1,14 @@
+alias: TV On
+trigger:
+  platform: state
+  entity_id: input_boolean.tv
+  from: 'off'
+  to: 'on'
+action:
+  - service: wake_on_lan.send_magic_packet
+    data:
+      mac: !secret tv_mac
+  - service: switch.toggle
+    data:
+      entity_id: switch.stereo
+  - service: rest_command.tv_power_on

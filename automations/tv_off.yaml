@@ -1,0 +1,11 @@
+alias: TV Off
+trigger:
+  platform: state
+  entity_id: input_boolean.tv
+  from: 'on'
+  to: 'off'
+action:
+  - service: switch.toggle
+    data:
+      entity_id: switch.stereo
+  - service: rest_command.tv_power_off

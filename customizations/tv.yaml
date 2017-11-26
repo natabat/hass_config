@@ -16,3 +16,91 @@ script.prime:
 script.steam:
   icon: mdi:steam
   emulated_hue_hidden: false
+script.remote_control:
+  custom_ui_state_card: state-card-tiles
+  config:
+    columns: 3
+    row_height: 60px
+    column_width: 60px
+    gap: 5px
+    entities:
+      - entity: input_boolean.tv
+        icon: mdi:television-classic
+        column: 1
+        row: 1
+      - entity: script.find_remote
+        icon: mdi:remote
+        column: 3
+        row: 1
+      - entity: script.roku_back
+        icon: mdi:arrow-left-thick
+        column: 1
+        row: 2
+      - entity: script.roku_up
+        icon: mdi:arrow-up-bold-box
+        column: 2
+        row: 2
+      - entity: script.roku_home
+        icon: mdi:home-outline
+        column: 3
+        row: 2
+      - entity: script.roku_left
+        icon: mdi:arrow-left-bold-box
+        column: 1
+        row: 3
+      - entity: script.roku_ok
+        icon: mdi:checkbox-marked
+        column: 2
+        row: 3
+      - entity: script.roku_right
+        icon: mdi:arrow-right-bold-box
+        column: 3
+        row: 3
+      - entity: script.roku_replay
+        icon: mdi:replay
+        column: 1
+        row: 4
+      - entity: script.roku_down
+        icon: mdi:arrow-down-bold-box
+        column: 2
+        row: 4
+      - entity: script.roku_play
+        icon: mdi:play
+        column: 3
+        row: 4
+      - entity: switch.stereo_mute
+        icon: mdi:volume-mute
+        column: 1
+        row: 5
+      - entity: script.volume_down
+        icon: mdi:volume-minus
+        column: 2
+        row: 5
+      - entity: script.volume_up
+        icon: mdi:volume-plus
+        column: 3
+        row: 5
+      - entity: script.netflix
+        icon: mdi:netflix
+        column: 1
+        row: 6
+      - entity: script.hulu
+        icon: mdi:hulu
+        column: 2
+        row: 6
+      - entity: script.prime
+        icon: mdi:amazon
+        column: 3
+        row: 6
+      - entity: script.nintendo_switch
+        icon: mdi:nintendo-switch
+        column: 1
+        row: 7
+      - entity: script.steam
+        icon: mdi:steam
+        column: 2
+        row: 7
+      - entity: script.broadcast
+        icon: mdi:radio-tower
+        column: 3
+        row: 7

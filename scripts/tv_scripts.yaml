@@ -1,0 +1,75 @@
+find_remote:
+  sequence:
+    - service: wake_on_lan.send_magic_packet
+      data:
+        mac: !secret tv_mac
+    - delay: 00:00:05
+    - service: rest_command.tv_find_remote
+broadcast:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_input_tuner'
+hulu:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_hulu'
+netflix:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_netflix'
+nintendo_switch:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_input_hdmi1'
+remote_control:
+  sequence:
+roku_ok:
+  sequence:
+    - service: rest_command.roku_ok
+roku_up:
+  sequence:
+    - service: rest_command.roku_up
+roku_down:
+  sequence:
+    - service: rest_command.roku_down
+roku_left:
+  sequence:
+    - service: rest_command.roku_left
+roku_right:
+  sequence:
+    - service: rest_command.roku_right
+roku_home:
+  sequence:
+    - service: rest_command.roku_home
+roku_back:
+  sequence:
+    - service: rest_command.roku_back
+roku_replay:
+  sequence:
+    - service: rest_command.roku_replay
+roku_play:
+  sequence:
+    - service: rest_command.roku_play
+prime:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_prime'
+steam:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_input_hdmi2'
+volume_down:
+  sequence:
+    - service: switch.toggle
+      entity_id: switch.stereo_down
+volume_up:
+  sequence:
+    - service: switch.toggle
+      entity_id: switch.stereo_up
+

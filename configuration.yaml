@@ -28,9 +28,10 @@ light: !include lights.yaml
 notify: !include notify.yaml
 panel_iframe: !include panels.yaml
 rest_command: !include rest_commands.yaml
-script: !include_dir_named scripts
+script: !include_dir_merge_named scripts/
 sensor: !include sensors.yaml
 switch: !include switches.yaml
+wake_on_lan:
 zwave: !include zwave.yaml
 
 # enable the basics
@@ -43,7 +44,7 @@ emulated_hue:
   expose_by_default: false
 frontend:
   extra_html_url:
-    - /local/custom_ui/state_card_tiles.html
+    - /local/custom_ui/state-card-tiles.html
 history:
 http:
   api_password: !secret http_password
@@ -51,6 +52,8 @@ logbook:
 python_script:
 recorder:
   db_url: !secret db_url
+  purge_interval: 7
+  purge_keep_days: 7
 sun:
 updater:
 

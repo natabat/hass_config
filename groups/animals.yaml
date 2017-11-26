@@ -3,6 +3,4 @@ animals:
   view: no
   control: hidden
   entities:
-    - input_boolean.cat_meal
-    - input_boolean.dog_meal
     - switch.feeder
