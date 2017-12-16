@@ -1,0 +1,18 @@
+alias: Tree Lights On
+trigger:
+  - platform: time
+    at: '17:00:00'
+  - platform: state
+    entity_id: group.us
+    to: 'home'
+condition:
+  condition: and
+  conditions:
+    - condition: time
+      after: '17:00:00'
+    - condition: state
+      entity_id: group.us
+      state: 'home'
+action:
+  - service: homeassistant.turn_on
+    entity_id: switch.christmas_tree_lights

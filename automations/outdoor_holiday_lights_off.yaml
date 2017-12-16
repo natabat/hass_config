@@ -1,0 +1,8 @@
+alias: Outdoor Lights Off
+initial_state: True
+trigger:
+  - platform: time
+    at: '22:00:00'
+action:
+  - service: homeassistant.turn_off
+    entity_id: group.outdoor_holiday_lights

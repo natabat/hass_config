@@ -27,3 +27,10 @@ lights:
     - light.kitchen_lights_level
     - light.living_room_lights_level
     - switch.patio_light_switch
+    - switch.christmas_tree_lights
+outdoor_holiday_lights:
+  name: Outdoor Holiday Lights
+  view: no
+  entities:
+    - switch.entry_lights_porch
+    - switch.garage_outlet_switch

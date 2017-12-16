@@ -1,1 +1,10 @@
-[]
+- action:
+  - service: script.shut_it_down
+  alias: Shut Down When Away
+  condition: []
+  id: '1512665448871'
+  trigger:
+  - entity_id: group.us
+    from: 'home'
+    platform: state
+    to: 'not_home'

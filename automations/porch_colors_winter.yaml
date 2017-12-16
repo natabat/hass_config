@@ -1,0 +1,11 @@
+alias: Porch Colors Winter
+trigger:
+  - platform: state
+    entity_id: switch.entry_light_porch
+  - platform: event
+    event_type: PORCH_COLOR_LOOP
+condition:
+  condition: template
+  value_template: '{{ now().month == 12}}'
+action:
+  - service: script.porch_colors_winter

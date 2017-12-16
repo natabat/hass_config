@@ -35,3 +35,11 @@ switch.patio_light_switch:
   friendly_name: Patio Light
   icon: mdi:tree
   emulated_hue_hidden: false
+group.lights:
+  friendly_name: Lights
+  emulated_hue_hidden: false
+switch.garage_outlet_switch:
+  friendly_name: Garage Outlet
+group.outdoor_holiday_lights:
+  friendly_name: Holiday Lights
+  emulate_hue_hidden: false

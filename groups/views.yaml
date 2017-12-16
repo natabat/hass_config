@@ -10,12 +10,15 @@ default_view:
     - group.garage
     - script.shut_it_down
     - group.animals
+    - group.holiday_lights
 bedroom:
   name: Bedroom
   view: yes
   entities:
     - light.bedroom_lights_level
     - group.alarm
+    - input_boolean.bed_cassidy
+    - input_boolean.bed_natalie
 tv:
   name: TV Commands
   view: yes
@@ -34,4 +37,15 @@ tv:
     # - switch.stereo_mute
     - rest_command.roku_down
     - script.remote_control
+holiday:
+  name: Holiday
+  view: yes
+  entities:
+    - light.christmas_tree_lights
+    - light.porch_bulb
+    - switch.garage_outlet
+    - switch.entry_lights_porch
+    - automation.tree_lights_on
+    - automation.outdoor_lights_on
+    - automation.porch_colors_winter
     

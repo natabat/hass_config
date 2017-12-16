@@ -1,2 +1,7 @@
 tv:
   name: TV
+  initial: off
+bed_cassidy:
+  name: Cassidy's in bed
+bed_natalie:
+  name: Natalie's in bed

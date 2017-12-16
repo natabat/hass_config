@@ -1,0 +1,23 @@
+porch_colors_winter:
+  sequence:
+    - service: light.turn_on
+      data:
+        entity_id: light.porch_bulb
+        rgb_color: [255, 0, 0]
+        transition: 10
+    - delay: 00:00:40
+    - service: light.turn_on
+      data:
+        entity_id: light.porch_bulb
+        rgb_color: [0, 255, 0]
+        transition: 10
+    - delay: 00:00:40
+    - service: light.turn_on
+      data:
+        entity_id: light.porch_bulb
+        rgb_color: [0, 0, 255]
+        transition: 10
+    - delay: 00:00:40
+    - event: PORCH_COLOR_LOOP
+    
+      
