@@ -5,6 +5,35 @@
   id: '1512665448871'
   trigger:
   - entity_id: group.us
-    from: 'home'
+    from: home
     platform: state
-    to: 'not_home'
+    to: not_home
+- action:
+  - data:
+      entity_id: switch.patio_light_switch
+    service: switch.turn_on
+  alias: Back Door Open
+  condition:
+  - after: sunrise
+    after_offset: 00:30:00
+    before: sunset
+    before_offset: -00:30:00
+    condition: sun
+  id: '1514217330530'
+  trigger:
+  - entity_id: binary_sensor.back_door_sensor
+    from: 'off'
+    platform: state
+    to: 'on'
+- action:
+  - data:
+      entity_id: switch.patio_light_switch
+    service: switch.turn_off
+  alias: Back Door Close
+  condition: []
+  id: '1514217421324'
+  trigger:
+  - entity_id: binary_sensor.back_door_sensor
+    from: 'on'
+    platform: state
+    to: 'off'

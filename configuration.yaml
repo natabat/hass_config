@@ -20,7 +20,7 @@ device_sun_light_trigger:
 group: !include_dir_merge_named groups/
 input_boolean: !include booleans.yaml
 input_datetime: !include datetimes.yaml
-input_number: !include numbers.yaml
+#input_number: !include numbers.yaml
 intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
 #nest:

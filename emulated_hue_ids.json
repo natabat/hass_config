@@ -1,0 +1,16 @@
+{
+    "1": "switch.entry_lights_switch",
+    "10": "switch.patio_light_switch",
+    "11": "group.lights",
+    "12": "light.bedroom_lights_level",
+    "13": "light.living_room_lights_level",
+    "14": "light.awkward_lights_level",
+    "2": "script.netflix",
+    "3": "script.prime",
+    "4": "script.hulu",
+    "5": "light.dining_room_lights_level",
+    "6": "script.nintendo_switch",
+    "7": "light.kitchen_lights_level",
+    "8": "script.steam",
+    "9": "input_boolean.tv"
+}

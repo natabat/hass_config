@@ -5,6 +5,7 @@ default_view:
     - device_tracker.natalie
     - device_tracker.cassidy
     - binary_sensor.front_door_unlocked
+    - binary_sensor.back_door_open
     - group.lights
     - group.front_door
     - group.garage
