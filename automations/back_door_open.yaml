@@ -1,0 +1,19 @@
+alias: Back Door Open
+initial_state: True
+trigger:
+  platform: state
+  entity_id: binary_sensor.back_door_sensor
+  from: 'off'
+  to: 'on'
+condition:
+  condition: or
+  conditions:
+    - condition: sun
+      after: sunset
+    - condition: sun
+      before: sunrise
+action:
+  service: switch.turn_on
+  data:
+    entity_id: switch.patio_light_switch
+    

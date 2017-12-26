@@ -11,20 +11,6 @@
 - action:
   - data:
       entity_id: switch.patio_light_switch
-    service: switch.turn_on
-  alias: Back Door Open
-  condition:
-  - after: sunset
-    condition: sun
-  id: '1514217330530'
-  trigger:
-  - entity_id: binary_sensor.back_door_sensor
-    from: 'off'
-    platform: state
-    to: 'on'
-- action:
-  - data:
-      entity_id: switch.patio_light_switch
     service: switch.turn_off
   alias: Back Door Close
   condition: []
