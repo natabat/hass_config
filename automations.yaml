@@ -14,10 +14,7 @@
     service: switch.turn_on
   alias: Back Door Open
   condition:
-  - after: sunrise
-    after_offset: 00:30:00
-    before: sunset
-    before_offset: -00:30:00
+  - after: sunset
     condition: sun
   id: '1514217330530'
   trigger:

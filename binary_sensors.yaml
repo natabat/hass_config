@@ -5,9 +5,8 @@
       entity_id: lock.front_door_locked
       device_class: safety
       value_template: "{{ is_state('lock.front_door_locked', 'unlocked') }}"
-  sensors:
     back_door_open:
       friendly_name: Back Door
       entity_id: binary_sensor.back_door_sensor
       device_class: safety
-      value_template: "{{ is_state('binary_sensor.back_door_sensor', 'off') }}"
+      value_template: "{{ is_state('binary_sensor.back_door_sensor', 'on') }}"
