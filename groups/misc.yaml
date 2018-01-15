@@ -2,7 +2,7 @@ misc:
   name: Misc
   view: yes
   entities:
-    - group.holidays
+    - group.holiday
     - input_boolean.guest_present
 holiday:
   name: Holidays

@@ -72,4 +72,10 @@ volume_up:
   sequence:
     - service: switch.toggle
       entity_id: switch.stereo_up
-
+toggle_stereo:
+  sequence:
+    - service: switch.toggle
+      entity_id: switch.stereo
+toggle_tv:
+  sequence:
+    - service: rest_command.tv_power

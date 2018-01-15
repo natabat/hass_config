@@ -3,4 +3,5 @@
 secrets.yaml
 known_devices.yaml
 home-assistant.log
-OZQ_Log.txt
+OZW_Log.txt
+zwcfg*.xml

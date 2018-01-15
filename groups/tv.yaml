@@ -10,6 +10,9 @@ remote_control:
     - script.remote_control
 info:
   name: Info
+  control: hidden
   entities:
     - binary_sensor.stereo
     - binary_sensor.tv
+    - script.toggle_stereo
+    - script.toggle_tv
