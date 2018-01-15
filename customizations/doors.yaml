@@ -4,3 +4,5 @@ cover.garage:
   friendly_name: Garage
 script.shut_it_down:
   friendly_name: Shut It Down
+sensor.battery_level_door_cam:
+  friendly_name: Door Cam Battery

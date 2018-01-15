@@ -9,9 +9,15 @@ homeassistant:
   customize: !include_dir_merge_named customizations
   packages: !include_dir_named packages
 
+alarm_control_panel:
+  - platform: arlo
+arlo:
+  username: !secret arlo_user
+  password: !secret arlo_password
 automation: !include automations.yaml
 automation dir: !include_dir_list automations
 binary_sensor: !include binary_sensors.yaml
+camera: !include camera.yaml
 cover: !include covers.yaml
 device_tracker: !include device_tracker.yaml
 device_sun_light_trigger:
@@ -43,6 +49,8 @@ discovery:
     - roku
 emulated_hue:
   expose_by_default: false
+ffmpeg:
+  ffmpeg_bin: /usr/bin/ffmpeg
 frontend:
   javascript_version: latest
   extra_html_url:
@@ -60,6 +68,3 @@ sun:
 updater:
 
 logger:
-  default: info
-  logs:
-    homeassistant.components.script: debug

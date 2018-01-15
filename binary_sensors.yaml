@@ -10,13 +10,18 @@
       entity_id: binary_sensor.back_door_sensor
       device_class: safety
       value_template: "{{ is_state('binary_sensor.back_door_sensor', 'on') }}"
+    garage_door_open:
+      friendly_name: Garage Door
+      entity_id: sensor.garage_status
+      device_class: safety
+      value_template: "{{ is_state('sensor.garage_status', 'open') }}"
     stereo:
       friendly_name: Stereo
       entity_id: switch.stereo_plug
       value_template: "{{states.switch.stereo_plug.attributes['current_consumption'] | replace(' W', '') | float > 0.7 }}"
-- platform: command_line
-  name: tv
-  command: curl -s GET http://192.168.0.111:8060/query/device-info | grep -oP '(?<=<power-mode>).*(?=</power-mode>)' || (echo DisplayOff)
-  payload_on: PowerOn
-  payload_off: DisplayOff
-  scan_interval: 30
+#- platform: command_line
+#  name: tv
+#  command: curl -s GET http://192.168.0.111:8060/query/device-info | grep -oP '(?<=<power-mode>).*(?=</power-mode>)' || (echo DisplayOff)
+#  payload_on: PowerOn
+#  payload_off: DisplayOff
+#  scan_interval: 600
