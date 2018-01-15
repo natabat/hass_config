@@ -1,0 +1,44 @@
+default_view:
+  name: Main
+  view: yes
+  entities:
+    - device_tracker.natalie
+    - device_tracker.cassidy
+    - device_tracker.guest
+    - binary_sensor.front_door_unlocked
+    - binary_sensor.back_door_open
+    - group.lights
+    - group.front_door
+    - group.garage
+    - sensor.hallway_thermostat_temperature
+    - sensor.hallway_thermostat_target
+    - sensor.home_weather_apparent_temperature
+    - group.climate
+climate:
+  name: Climate
+  view: no
+  entities:
+    - climate.hallway
+    - sensor.home_weather_summary
+    - sensor.home_weather_daily_low_apparent_temperature
+    - sensor.home_weather_daily_high_apparent_temperature
+    - sensor.home_weather_hourly_summary
+    - sensor.home_weather_daily_summary
+front_door:
+  name: Front Door
+  view: no
+  control: hidden
+  entities:
+    - lock.front_door_locked
+    - switch.entry_lights_door
+    - switch.entry_lights_porch
+    - light.porch_bulb
+garage:
+  name: Garage
+  view: no
+  control: hidden
+  entities:
+    - cover.garage
+    - sensor.garage_status
+    - sensor.garage_car_present
+    - switch.garage_outlet_switch

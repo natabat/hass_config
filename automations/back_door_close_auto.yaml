@@ -1,0 +1,17 @@
+alias: Back Door Closed, Back to Auto Mode
+initial_state: True
+trigger:
+  platform: state
+  entity_id: binary_sensor.back_door_sensor
+  from: 'on'
+  to: 'off'
+condition: 
+  condition: state
+  entity_id: climate.hallway
+  state: eco
+action:
+  service: climate.set_operation_mode
+  data:
+    entity_id: climate.hallway
+    operation_mode: "auto"
+    

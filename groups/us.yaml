@@ -4,3 +4,4 @@ us:
   entities:
     - device_tracker.natalie
     - device_tracker.cassidy
+    - device_tracker.guest

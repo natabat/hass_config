@@ -1,0 +1,11 @@
+alias: Guest Present Off
+trigger:
+  platform: state
+  entity_id: input_boolean.guest_present
+  from: 'on'
+  to: 'off'
+action:
+  service: device_tracker.see
+  data:
+    dev_id: guest
+    location_name: not_home

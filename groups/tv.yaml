@@ -1,0 +1,15 @@
+tv:
+  name: TV Commands
+  view: yes
+  entities:
+    - group.remote_control
+    - group.info
+remote_control:
+  name: Remote Control
+  entities:
+    - script.remote_control
+info:
+  name: Info
+  entities:
+    - binary_sensor.stereo
+    - binary_sensor.tv

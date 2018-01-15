@@ -1,6 +1,0 @@
-animals:
-  name: Animals
-  view: no
-  control: hidden
-  entities:
-    - switch.feeder

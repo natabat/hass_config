@@ -5,3 +5,5 @@ bed_cassidy:
   name: Cassidy's in bed
 bed_natalie:
   name: Natalie's in bed
+guest_present:
+  name: A Guest Is Here

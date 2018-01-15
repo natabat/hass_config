@@ -1,0 +1,18 @@
+misc:
+  name: Misc
+  view: yes
+  entities:
+    - group.holidays
+    - input_boolean.guest_present
+holiday:
+  name: Holidays
+  view: no
+  control: hidden
+  entities:
+    - light.christmas_tree_lights
+    - light.porch_bulb
+    - switch.garage_outlet
+    - switch.entry_lights_porch
+    - automation.tree_lights_on
+    - automation.outdoor_lights_on
+    - automation.porch_colors_winter

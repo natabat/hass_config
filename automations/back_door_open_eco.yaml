@@ -1,0 +1,16 @@
+alias: Back Door Open For X Minutes, Eco Mode
+initial_state: True
+trigger:
+  platform: state
+  entity_id: binary_sensor.back_door_sensor
+  from: 'off'
+  to: 'on'
+  for:
+    hours: 0
+    minutes: 10
+action:
+  service: climate.set_operation_mode
+  data:
+    entity_id: climate.hallway
+    operation_mode: "eco"
+    

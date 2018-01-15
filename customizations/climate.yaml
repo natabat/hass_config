@@ -1,0 +1,18 @@
+sensor.hallway_thermostat_target:
+  friendly_name: Target
+sensor.hallway_thermostat_temperature:
+  friendly_name: Indoor
+climate.hallway:
+  friendly_name: Thermostat
+sensor.home_weather_apparent_temperature:
+  friendly_name: Outdoor
+sensor.home_weather_daily_high_apparent_temperature:
+  friendly_name: High
+sensor.home_weather_daily_low_apparent_temperature:
+  friendly_name: Low
+sensor.home_weather_summary:
+  friendly_name: Current
+sensor.home_weather_hourly_summary:
+  friendly_name: Today
+sensor.home_weather_daily_summary:
+  friendly_name: This Week

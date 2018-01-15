@@ -1,0 +1,28 @@
+bedroom:
+  name: Bedroom
+  view: yes
+  entities:
+    - light.bedroom_lights_level
+    - group.alarm
+    - group.going_to_bed
+    - group.animals
+going_to_bed:
+  name: Going To Bed
+  view: no
+  entities:
+    - script.shut_it_down
+    - input_boolean.bed_cassidy
+    - input_boolean.bed_natalie
+alarm:
+  name: Alarm
+  view: no
+  entities:
+    - automation.sunrise_alarm
+    - input_datetime.sunrise_alarm_time
+    - input_datetime.morning_lights_time
+animals:
+  name: Animals
+  view: no
+  control: hidden
+  entities:
+    - switch.feeder

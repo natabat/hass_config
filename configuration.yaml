@@ -23,9 +23,9 @@ input_datetime: !include datetimes.yaml
 #input_number: !include numbers.yaml
 intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
-#nest:
-#  client_id: !secret nest_id
-#  client_secret: !secret nest_secret
+nest:
+  client_id: !secret nest_id
+  client_secret: !secret nest_secret
 notify: !include notify.yaml
 panel_iframe: !include panels.yaml
 rest_command: !include rest_commands.yaml

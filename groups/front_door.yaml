@@ -1,9 +1,0 @@
-front_door:
-  name: Front Door
-  view: no
-  control: hidden
-  entities:
-    - lock.front_door_locked
-    - switch.entry_lights_door
-    - switch.entry_lights_porch
-    - light.porch_bulb

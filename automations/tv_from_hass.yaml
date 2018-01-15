@@ -1,14 +1,15 @@
-alias: TV On
+alias: TV from HASS
 trigger:
   platform: state
   entity_id: input_boolean.tv
-  from: 'off'
-  to: 'on'
 action:
   - service: wake_on_lan.send_magic_packet
     data:
       mac: !secret tv_mac
+  - service_template: rest_command.tv_power_{{trigger.to_state.state}}
+  - condition: template
+    value_template: '{{ states("input_boolean.tv") != states("binary_sensor.stereo") }}'
   - service: switch.toggle
     data:
       entity_id: switch.stereo
-  - service: rest_command.tv_power_on
+    

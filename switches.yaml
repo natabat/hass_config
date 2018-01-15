@@ -18,4 +18,7 @@
      friendly_name: 'Stereo Mute'
      command_on: 'JgBQAAABKJITEhMSEhITEhMSExISEhMSEzcSNxM2EzcTNhQ1EzcTNhMSExITEhM2ExITERM3FBETNhM3EzYTEhQ1EzcSEhM3EgAE9wABJ0sUAA0FAAAAAAAAAAA='
      command_off: 'JgBQAAABKJITEhMSEhITEhMSExISEhMSEzcSNxM2EzcTNhQ1EzcTNhMSExITEhM2ExITERM3FBETNhM3EzYTEhQ1EzcSEhM3EgAE9wABJ0sUAA0FAAAAAAAAAAA='
-  
+- platform: tplink
+  name: Stereo Plug
+  host: 192.168.0.121
+  enable_leds: false

@@ -17,11 +17,21 @@ condition:
     - condition: time
       after: '19:00:00'
       before: '04:00:00'
-    - condition: state
-      entity_id: input_boolean.bed_cassidy
-      state: 'on'
-    - condition: state
-      entity_id: input_boolean.bed_natalie
-      state: 'on'
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: input_boolean.bed_cassidy
+        state: 'on'
+      - condition: state
+        entity_id: device_tracker.cassidy
+        state: 'not_home'
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: input_boolean.bed_natalie
+        state: 'on'
+      - condition: state
+        entity_id: device_tracker.natalie
+        state: 'not_home'
 action:
   - service: script.shut_it_down
