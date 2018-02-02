@@ -3,16 +3,16 @@ tv:
   view: yes
   entities:
     - group.remote_control
-    - group.info
+    - group.debug
 remote_control:
   name: Remote Control
   entities:
     - script.remote_control
-info:
-  name: Info
+debug:
+  name: Debug
   control: hidden
   entities:
     - binary_sensor.stereo
-    - binary_sensor.tv
     - script.toggle_stereo
     - script.toggle_tv
+    - switch.tv_power

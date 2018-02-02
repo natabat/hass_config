@@ -1,17 +1,24 @@
 alias: Back Door Open
 initial_state: True
 trigger:
-  platform: state
-  entity_id: binary_sensor.back_door_sensor
-  from: 'off'
-  to: 'on'
+  - platform: state
+    entity_id: binary_sensor.back_door_sensor
+    from: 'off'
+    to: 'on'
+  - platform: sun
+    event: sunset
 condition:
-  condition: or
+  condition: and
   conditions:
-    - condition: sun
-      after: sunset
-    - condition: sun
-      before: sunrise
+    - condition: or
+      conditions:
+        - condition: sun
+          after: sunset
+        - condition: sun
+          before: sunrise
+    - condition: state
+      entity_id: binary_sensor.back_door_sensor
+      state: 'on'
 action:
   service: switch.turn_on
   data:

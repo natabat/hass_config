@@ -5,6 +5,7 @@
     "12": "light.bedroom_lights_level",
     "13": "light.living_room_lights_level",
     "14": "light.awkward_lights_level",
+    "15": "switch.tv_power",
     "2": "script.netflix",
     "3": "script.prime",
     "4": "script.hulu",

@@ -1,57 +1,57 @@
 roku_ok:
-  url: 'http://192.168.0.111:8060/keypress/Select'
+  url: 'http://192.168.1.24:8060/keypress/Select'
   method: 'post' 
 tv_power:
-  url: 'http://192.168.0.111:8060/keypress/Power'
+  url: 'http://192.168.1.24:8060/keypress/Power'
   method: 'post'
 tv_power_on:
-  url: 'http://192.168.0.111:8060/keypress/PowerOn'
+  url: 'http://192.168.1.24:8060/keypress/PowerOn'
   method: 'post'
 tv_power_off:
-  url: 'http://192.168.0.111:8060/keypress/PowerOff'
+  url: 'http://192.168.1.24:8060/keypress/PowerOff'
   method: 'post'
 tv_input_hdmi1:
-  url: 'http://192.168.0.111:8060/keypress/InputHDMI1'
+  url: 'http://192.168.1.24:8060/keypress/InputHDMI1'
   method: 'post'
 tv_input_hdmi2:
-  url: 'http://192.168.0.111:8060/keypress/InputHDMI2'
+  url: 'http://192.168.1.24:8060/keypress/InputHDMI2'
   method: 'post'
 tv_input_tuner:
-  url: 'http://192.168.0.111:8060/keypress/InputTuner'
+  url: 'http://192.168.1.24:8060/keypress/InputTuner'
   method: 'post'
 tv_find_remote:
-  url: 'http://192.168.0.111:8060/keypress/FindRemote'
+  url: 'http://192.168.1.24:8060/keypress/FindRemote'
   method: 'post'
 tv_netflix:
-  url: 'http://192.168.0.111:8060/launch/12'
+  url: 'http://192.168.1.24:8060/launch/12'
   method: 'post'
 tv_hulu:
-  url: 'http://192.168.0.111:8060/launch/2285'
+  url: 'http://192.168.1.24:8060/launch/2285'
   method: 'post'
 tv_prime:
-  url: 'http://192.168.0.111:8060/launch/13'
+  url: 'http://192.168.1.24:8060/launch/13'
   method: 'post'
 roku_up:
-  url: 'http://192.168.0.111:8060/keypress/Up'
+  url: 'http://192.168.1.24:8060/keypress/Up'
   method: 'post'
 roku_down:
-  url: 'http://192.168.0.111:8060/keypress/Down'
+  url: 'http://192.168.1.24:8060/keypress/Down'
   method: 'post'
 roku_left:
-  url: 'http://192.168.0.111:8060/keypress/Left'
+  url: 'http://192.168.1.24:8060/keypress/Left'
   method: 'post'
 roku_right:
-  url: 'http://192.168.0.111:8060/keypress/Right'
+  url: 'http://192.168.1.24:8060/keypress/Right'
   method: 'post'
 roku_home:
-  url: 'http://192.168.0.111:8060/keypress/Home'
+  url: 'http://192.168.1.24:8060/keypress/Home'
   method: 'post'
 roku_back:
-  url: 'http://192.168.0.111:8060/keypress/Back'
+  url: 'http://192.168.1.24:8060/keypress/Back'
   method: 'post'
 roku_replay:
-  url: 'http://192.168.0.111:8060/keypress/InstantReplay'
+  url: 'http://192.168.1.24:8060/keypress/InstantReplay'
   method: 'post'
 roku_play:
-  url: 'http://192.168.0.111:8060/keypress/Play'
+  url: 'http://192.168.1.24:8060/keypress/Play'
   method: 'post'

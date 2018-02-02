@@ -20,5 +20,12 @@
      command_off: 'JgBQAAABKJITEhMSEhITEhMSExISEhMSEzcSNxM2EzcTNhQ1EzcTNhMSExITEhM2ExITERM3FBETNhM3EzYTEhQ1EzcSEhM3EgAE9wABJ0sUAA0FAAAAAAAAAAA='
 - platform: tplink
   name: Stereo Plug
-  host: 192.168.0.121
+  host: 192.168.1.25
   enable_leds: false
+- platform: command_line
+  switches:
+    tv_power:
+      command_on: 'wakeonlan 3C:59:1E:F1:A3:66; sleep .25; curl -X POST http://192.168.1.24:8060/keypress/PowerOn'
+      command_off: 'curl -X POST http://192.168.1.24:8060/keypress/PowerOff'
+      command_state: 'curl -s GET http://192.168.1.24:8060/query/device-info | grep power-mode | sed -e "s:.*<power-mode>DisplayOff</power-mode>:OFF:" -e "s:.*<power-mode>PowerOn</power-mode>:ON:" || echo OFF'
+      value_template: '{{ value == "ON" }}'

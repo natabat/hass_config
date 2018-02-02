@@ -40,6 +40,7 @@ group.lights:
   emulated_hue_hidden: false
 switch.garage_outlet_switch:
   friendly_name: Garage Outlet
+  icon: mdi:power-socket-us
 group.outdoor_holiday_lights:
   friendly_name: Holiday Lights
   emulate_hue_hidden: false

@@ -1,0 +1,9 @@
+hassiq:
+  name: Hass IQ
+  view: no
+  entities:
+  - light.awkward_lights_level
+  - light.bedroom_lights_level
+  - group.lights
+  - script.shut_it_down
+  

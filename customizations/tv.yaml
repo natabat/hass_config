@@ -1,8 +1,7 @@
-binary_sensor.tv:
-  friendly_name: TV
-input_boolean.tv:
+switch.tv_power:
   icon: mdi:television-classic
   emulated_hue_hidden: false
+  friendly_name: TV
 script.hulu:
   icon: mdi:hulu
   emulated_hue_hidden: false
@@ -20,16 +19,13 @@ script.steam:
   emulated_hue_hidden: false
 script.toggle_stereo:
   friendly_name: Stereo Power
-  icon: mdi:speaker
+  icon: mdi:power
 script.toggle_tv:
-  friendly_name: TV Power
-  icon: mdi:television-classic
+  friendly_name: TV Power Toggle
+  icon: mdi:power
 binary_sensor.stereo:
   friendly_name: Stereo Status
   icon: mdi:speaker
-binary_sensor.tv:
-  friendly_name: TV Status
-  icon: mdi:television-classic
 script.remote_control:
   custom_ui_state_card: state-card-tiles
   config:
@@ -38,7 +34,7 @@ script.remote_control:
     column_width: 60px
     gap: 5px
     entities:
-      - entity: input_boolean.tv
+      - entity: switch.tv_power
         icon: mdi:television-classic
         column: 1
         row: 1

@@ -11,6 +11,7 @@ homeassistant:
 
 alarm_control_panel:
   - platform: arlo
+api:
 arlo:
   username: !secret arlo_user
   password: !secret arlo_password
@@ -68,3 +69,9 @@ sun:
 updater:
 
 logger:
+  logs:
+    pyarlo: error
+    pyHS100.protocol: error
+    homeassistant.components.zwave.util: error
+    libopenzwave: error
+    openzwave: error

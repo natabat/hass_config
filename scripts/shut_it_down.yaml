@@ -5,7 +5,7 @@ shut_it_down:
     - service: homeassistant.turn_off
       entity_id: group.lights
     - service: homeassistant.turn_off
-      entity_id: input_boolean.tv
+      entity_id: switch.tv_power
     # - service: input_boolean.turn_on
       # entity_id: input_boolean.door_cam_motion
     - service: cover.close_cover
