@@ -28,6 +28,17 @@ lights:
     - light.living_room_lights_level
     - switch.patio_light_switch
     - switch.christmas_tree_lights
+common_lights:
+  name: Common Lights
+  view: no
+  entities:
+    - light.awkward_lights_level
+    - light.dining_room_lights_level
+    - switch.entry_lights_door
+    - switch.entry_lights_porch
+    - light.kitchen_lights_level
+    - light.living_room_lights_level
+    - switch.patio_light_switch
 outdoor_holiday_lights:
   name: Outdoor Holiday Lights
   view: no

@@ -1,0 +1,143 @@
+homeassistant:
+  customize:
+      script.main_floorplan:
+        custom_ui_state_card: state-card-floorplan
+        config:
+          name: Main Floorplan
+          image: /local/custom_ui/floorplan/main_floorplan.svg
+          stylesheet: /local/custom_ui/floorplan/floorplan.css
+          warnings:
+          groups:
+            - name: Temperature
+              entities:
+                - sensor.hallway_thermostat_temperature
+                - sensor.heat_to_temp
+                - sensor.cool_to_temp
+              text_template: '${entity.state ? entity.state : "--"}°F'
+            - name: Warm Up
+              elements:
+                - warm_up
+              action:
+                domain: python_script
+                service: temp_step
+                data:
+                  entity_id: climate.hallway
+                  target_temp: low
+                  step: 2
+            - name: Warm Down
+              elements:
+                - warm_down
+              action:
+                domain: python_script
+                service: temp_step
+                data:
+                  entity_id: climate.hallway
+                  target_temp: low
+                  step: -2
+            - name: Cool Up
+              elements:
+                - cool_up
+              action:
+                domain: python_script
+                service: temp_step
+                data:
+                  entity_id: climate.hallway
+                  target_temp: high
+                  step: 2
+            - name: Cool Down
+              elements:
+                - cool_down
+              action:
+                domain: python_script
+                service: temp_step
+                data:
+                  entity_id: climate.hallway
+                  target_temp: high
+                  step: -2
+            - name: Lights
+              entities:
+                - light.bedroom_lights_level
+              groups:
+                  - group.common_lights
+              action:
+                service: toggle
+              states:
+                - state: 'on'
+                  class: 'light-on'
+                - state: 'off'
+                  class: 'light-off'
+            - name: Garage
+              entities:
+                - cover.garage
+              states:
+                - state: 'closed'
+                  class: 'cover-closed'
+                - state: 'open'
+                  class: 'cover-open'
+            - name: Garage Toggles
+              elements:
+                - garage_label
+                - garage_area
+              action:
+                domain: script
+                service: toggle_garage_door
+            - name: Shutdown
+              elements:
+                - shut_down
+              action:
+                domain: script
+                service: shut_it_down
+            - name: Locks
+              entities:
+                - lock.front_door_locked
+              image_template: '
+                var imageName = "";
+
+                switch (entity.state) {
+                  case "locked":
+                    imageName = "lock";
+                    break;
+
+                  case "unlocked":
+                    imageName = "lock-open";
+                    break;
+                }
+
+                return "/local/custom_ui/floorplan/" + imageName + ".svg";
+                '
+              action:
+                domain: script
+                service: toggle_front_door_lock
+                
+script:
+  main_floorplan:
+    sequence:
+  toggle_garage_door:
+    sequence:
+      - service_template: >
+          {% if is_state('cover.garage', 'open') %}
+            cover.close_cover
+          {% else %}
+            cover.open_cover
+          {% endif %}
+        entity_id: cover.garage
+  toggle_front_door_lock:
+    sequence:
+      - service_template: >
+          {% if is_state('lock.front_door_locked', 'locked') %}
+            lock.unlock
+          {% else %}
+            lock.lock
+          {% endif %}
+        entity_id: lock.front_door_locked
+      
+group:
+  main_floorplan:
+    name: Floorplan
+    view: yes
+    entities:
+      - group.main_floorplan_group
+  main_floorplan_group:
+    name: Floorplan
+    entities:
+    - script.main_floorplan

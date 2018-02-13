@@ -1,0 +1,87 @@
+climate.hallway:
+  platform: nest
+  unique_id: 2lk53H8pCMWVd837yvzjqgKjTAe5OhDy
+switch.feeder:
+  platform: wemo
+  unique_id: 221549K0100221
+switch.christmas_tree_lights:
+  platform: wemo
+  unique_id: 221610K0102807
+light.kitchen_lights_level:
+  platform: zwave
+  unique_id: 3-72057594093076481
+light.bedroom_lights_level:
+  platform: zwave
+  unique_id: 12-72057594244071425
+switch.entry_lights_switch:
+  platform: zwave
+  unique_id: 13-72057594260832256
+switch.entry_lights_door:
+  platform: zwave
+  unique_id: 13-144115188298760192
+switch.entry_lights_porch:
+  platform: zwave
+  unique_id: 13-216172782336688128
+light.awkward_lights_level:
+  platform: zwave
+  unique_id: 14-72057594277625857
+light.dining_room_lights_level:
+  platform: zwave
+  unique_id: 15-72057594294403073
+switch.patio_light_switch:
+  platform: zwave
+  unique_id: 16-72057594311163904
+light.living_room_lights_level:
+  platform: zwave
+  unique_id: 17-72057594327957505
+switch.garage_outlet_switch:
+  platform: zwave
+  unique_id: 18-72057594344718336
+binary_sensor.back_door_sensor:
+  platform: zwave
+  unique_id: 19-72057594361675776
+sensor.back_door_alarm_type:
+  platform: zwave
+  unique_id: 19-72057594362740737
+sensor.back_door_alarm_level:
+  platform: zwave
+  unique_id: 19-72057594362740753
+sensor.back_door_sourcenodeid:
+  platform: zwave
+  unique_id: 19-72057594362740769
+sensor.back_door_access_control:
+  platform: zwave
+  unique_id: 19-72057594362740881
+sensor.back_door_burglar:
+  platform: zwave
+  unique_id: 19-72057594362740897
+sensor.back_door_power_management:
+  platform: zwave
+  unique_id: 19-72057594362740913
+lock.front_door_locked:
+  platform: zwave
+  unique_id: 20-72057594379272192
+sensor.front_door_alarm_type:
+  platform: zwave
+  unique_id: 20-72057594379517953
+sensor.front_door_alarm_level:
+  platform: zwave
+  unique_id: 20-72057594379517969
+sensor.front_door_sourcenodeid:
+  platform: zwave
+  unique_id: 20-72057594379517985
+sensor.front_door_access_control:
+  platform: zwave
+  unique_id: 20-72057594379518097
+sensor.front_door_burglar:
+  platform: zwave
+  unique_id: 20-72057594379518113
+sensor.front_door_power_management:
+  platform: zwave
+  unique_id: 20-72057594379518129
+sensor.front_door_system:
+  platform: zwave
+  unique_id: 20-72057594379518145
+switch.doorbell_switch:
+  platform: zwave
+  unique_id: 21-72057594395049984

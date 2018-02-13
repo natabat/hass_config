@@ -20,7 +20,7 @@
      command_off: 'JgBQAAABKJITEhMSEhITEhMSExISEhMSEzcSNxM2EzcTNhQ1EzcTNhMSExITEhM2ExITERM3FBETNhM3EzYTEhQ1EzcSEhM3EgAE9wABJ0sUAA0FAAAAAAAAAAA='
 - platform: tplink
   name: Stereo Plug
-  host: 192.168.1.25
+  host: 10.10.10.5
   enable_leds: false
 - platform: command_line
   switches:

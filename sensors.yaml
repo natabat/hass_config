@@ -1,5 +1,17 @@
 - platform: template
   sensors:
+    cool_to_temp:
+      friendly_name: Cool To Temp
+      value_template: >
+        {{states.climate.hallway.attributes['target_temp_high']}}
+      unit_of_measurement: '°F'
+      entity_id: climate.hallway
+    heat_to_temp:
+      friendly_name: Heat To Temp
+      value_template: >
+        {{states.climate.hallway.attributes['target_temp_low']}}
+      unit_of_measurement: '°F'
+      entity_id: climate.hallway
     garage_status:
       friendly_name: 'Garage Door Status'
       value_template: >

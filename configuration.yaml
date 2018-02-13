@@ -40,6 +40,7 @@ script: !include_dir_merge_named scripts/
 sensor: !include sensors.yaml
 switch: !include switches.yaml
 wake_on_lan:
+wemo: !include wemo.yaml
 zwave: !include zwave.yaml
 
 # enable the basics
@@ -56,6 +57,7 @@ frontend:
   javascript_version: latest
   extra_html_url:
     - /local/custom_ui/state-card-tiles.html
+    - /local/custom_ui/state-card-floorplan.html
 history:
 http:
   api_password: !secret http_password
@@ -75,3 +77,6 @@ logger:
     homeassistant.components.zwave.util: error
     libopenzwave: error
     openzwave: error
+    sseclient: error
+    homeassistant.components.websocket_api: error
+    homeassistant.components.device_tracker.unifi_direct: error
