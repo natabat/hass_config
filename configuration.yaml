@@ -61,6 +61,18 @@ frontend:
 history:
 http:
   api_password: !secret http_password
+  trusted_networks:
+    - 192.168.1.0/24
+    - 20.20.20.0/24
+    - 127.0.0.1
+    - ::1
+    
+  #ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
+  #ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
+  #base_url: fiddlersgreen.duckdns.org:8123
+  #trusted_networks:
+  #  - 192.168.1.1/24
+  #  - 20.20.20.1/24
 logbook:
 python_script:
 recorder:
@@ -68,6 +80,7 @@ recorder:
   purge_interval: 7
   purge_keep_days: 7
 sun:
+
 updater:
 
 logger:

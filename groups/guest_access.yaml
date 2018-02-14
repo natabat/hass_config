@@ -3,10 +3,4 @@ guest_access:
   view: yes
   entities:
   - group.main_floorplan_group
-  - group.misc_controls
   - group.remote_control
-misc_controls:
-  name: Other
-  view: no
-  entities:
-  - climate.hallway
