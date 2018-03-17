@@ -1,0 +1,89 @@
+alert:
+  dog_meal:
+    name: Feed Didi!
+    entity_id: input_boolean.dog_meal
+    state: 'on'
+    repeat:
+      - 60
+      - 30
+      - 15
+    notifiers:
+      - natalie
+  cat_meal:
+    name: Feed Dexter!
+    entity_id: input_boolean.cat_meal
+    state: 'on'
+    repeat:
+      - 60
+      - 30
+      - 15
+    notifiers:
+      - natalie
+input_boolean:
+  dog_meal:
+    name: Feed Didi
+    initial: off
+  cat_meal:
+    name: Feed Dexter
+    initial: off
+script:
+  happy_belly_button:
+    sequence:
+      service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.cat_meal
+  enjoy_life_button:
+    sequence:
+      service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.dog_meal
+automation:
+  - alias: Dash Button Press
+    initial_state: True
+    trigger:
+      - platform: state
+        entity_id: device_tracker.happy_belly_button
+        to: 'home'
+      - platform: state
+        entity_id: device_tracker.enjoy_life_button
+        to: 'home'
+    action:
+      - service_template: "script.{{trigger.entity_id.split('.')[-1]}}"
+      - service: device_tracker.see
+        data_template:
+          dev_id: "{{trigger.entity_id.split('.')[-1]}}"
+          location_name: "off"
+  - alias: Cat Meal Reset
+    initial_state: True
+    trigger:
+      - platform: time
+        at: '02:30:00'
+      - platform: time
+        at: '14:00:00'
+    action:
+      service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.cat_meal
+  - alias: Dog Meal Reset
+    initial_state: True
+    trigger:
+      - platform: time
+        at: '05:00:00'
+      - platform: time
+        at: '15:30:00'
+    action:
+      service: input_boolean.turn_on
+      data:
+        entity_id: input_boolean.dog_meal
+  - alias: Cat Meal Auto
+    initial_state: true
+    trigger:
+      platform: state
+      entity_id: switch.feeder
+      to: 'on'
+    action:
+      service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.cat_meal
+    
+    

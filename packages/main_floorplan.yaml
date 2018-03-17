@@ -134,10 +134,10 @@ script:
 group:
   main_floorplan:
     name: Floorplan
-    view: yes
+    view: no
     entities:
       - group.main_floorplan_group
   main_floorplan_group:
     name: Floorplan
     entities:
-    - script.main_floorplan
+      - script.main_floorplan
