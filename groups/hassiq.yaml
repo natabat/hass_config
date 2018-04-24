@@ -6,4 +6,7 @@ hassiq:
   - light.bedroom_lights_level
   - group.lights
   - script.shut_it_down
+  - switch.tv_power
+  - script.roku_play
+  - script.find_remote
   

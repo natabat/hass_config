@@ -7,31 +7,34 @@ alert:
       - 60
       - 30
       - 15
+    skip_first: true
     notifiers:
       - natalie
-  cat_meal:
-    name: Feed Dexter!
-    entity_id: input_boolean.cat_meal
-    state: 'on'
-    repeat:
-      - 60
-      - 30
-      - 15
-    notifiers:
-      - natalie
+#  cat_meal:
+#    name: Feed Dexter!
+#    entity_id: input_boolean.cat_meal
+#    state: 'on'
+#    repeat:
+#      - 60
+#      - 30
+#      - 15
+#    skip_first: true
+#    notifiers:
+#      - natalie
 input_boolean:
   dog_meal:
     name: Feed Didi
     initial: off
-  cat_meal:
-    name: Feed Dexter
-    initial: off
+#  cat_meal:
+#    name: Feed Dexter
+#    initial: off
 script:
   happy_belly_button:
     sequence:
-      service: input_boolean.turn_off
-      data:
-        entity_id: input_boolean.cat_meal
+      #service: script.toggle_garage_door
+      #service: input_boolean.turn_off
+      #data:
+        #entity_id: input_boolean.cat_meal
   enjoy_life_button:
     sequence:
       service: input_boolean.turn_off

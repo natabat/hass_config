@@ -18,4 +18,4 @@
     stereo:
       friendly_name: Stereo
       entity_id: switch.stereo_plug
-      value_template: "{{states.switch.stereo_plug.attributes['current_consumption'] | replace(' W', '') | float > 5 }}"
+      value_template: "{{states.switch.stereo_plug.attributes['current_power_w'] | float > 5 }}"

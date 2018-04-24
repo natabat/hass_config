@@ -1,4 +1,5 @@
 find_remote:
+  alias: Find Remote
   sequence:
     - service: wake_on_lan.send_magic_packet
       data:
@@ -52,6 +53,7 @@ roku_replay:
   sequence:
     - service: rest_command.roku_replay
 roku_play:
+  alias: Play
   sequence:
     - service: rest_command.roku_play
 prime:
