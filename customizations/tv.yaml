@@ -11,6 +11,12 @@ script.netflix:
 script.nintendo_switch:
   icon: mdi:nintendo-switch
   emulated_hue_hidden: false
+script.ps4:
+  icon: mdi:playstation
+  emulated_hue_hidden: false
+script.snes:
+  icon: mdi:gamepad
+  emulated_hue_hidden: false
 script.prime:
   icon: mdi:amazon
   emulated_hue_hidden: false
@@ -106,11 +112,19 @@ script.remote_control:
         icon: mdi:nintendo-switch
         column: 1
         row: 7
-      - entity: script.steam
-        icon: mdi:steam
+      - entity: script.ps4
+        icon: mdi:playstation
         column: 2
         row: 7
+      - entity: script.snes
+        icon: mdi:gamepad
+        column: 3
+        row: 7
+      - entity: script.steam
+        icon: mdi:steam
+        column: 1
+        row: 8
       - entity: script.broadcast
         icon: mdi:radio-tower
         column: 3
-        row: 7
+        row: 8

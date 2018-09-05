@@ -1,0 +1,22 @@
+{
+    "data": {
+        "entries": [
+            {
+                "data": {
+                    "impl_domain": "nest",
+                    "tokens": {
+                        "access_token": "c.akNxfVya7EzDSJG98iwkibK79QLaaUM5JjbP37NzIidz8io2VYWP192wUudVsfscVYcrUp7GSn3LFwGkePo50L7sy2KWOmhuEEpoIQdxtN67vE3PDmXROUYmaTXGUonQdkOfW6UvgFOKWp5B",
+                        "expires_in": 315360000
+                    }
+                },
+                "domain": "nest",
+                "entry_id": "7be959ab9a0e4f8dbd98f66dff65c5ee",
+                "source": "import",
+                "title": "Nest (import from configuration.yaml)",
+                "version": 1
+            }
+        ]
+    },
+    "key": "core.config_entries",
+    "version": 1
+}

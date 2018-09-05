@@ -16,3 +16,7 @@ debug:
     - script.toggle_stereo
     - script.toggle_tv
     - switch.tv_power
+    - switch.hdmi_switch_1
+    - switch.hdmi_switch_2
+    - switch.hdmi_switch_3
+    - switch.ps4

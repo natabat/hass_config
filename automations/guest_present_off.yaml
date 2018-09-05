@@ -1,4 +1,5 @@
 alias: Guest Present Off
+initial_state: True
 trigger:
   platform: state
   entity_id: input_boolean.guest_present

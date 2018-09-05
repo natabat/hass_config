@@ -14,6 +14,7 @@ default_view:
     - sensor.hallway_thermostat_target
     - sensor.home_weather_apparent_temperature
     - group.climate
+    - group.other_view
 climate:
   name: Climate
   view: no
@@ -42,3 +43,9 @@ garage:
     - sensor.garage_status
     - sensor.garage_car_present
     - switch.garage_outlet_switch
+other_view:
+  name: Other
+  view: no
+  control: hidden
+  entities:
+    input_boolean.dog_meal

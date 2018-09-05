@@ -11,21 +11,49 @@ broadcast:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_input_tuner'
+    - service: switch.turn_off
+      entity_id: switch.ps4
 hulu:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_hulu'
+    - service: switch.turn_off
+      entity_id: switch.ps4
 netflix:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_netflix'
+    - service: switch.turn_off
+      entity_id: switch.ps4
 nintendo_switch:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_input_hdmi1'
+    - service: switch.toggle
+      entity_id: switch.hdmi_switch_1
+    - service: switch.turn_off
+      entity_id: switch.ps4
+ps4:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_input_hdmi1'
+    - service: switch.turn_on
+      entity_id: switch.ps4
+    - service: switch.toggle
+      entity_id: switch.hdmi_switch_2
+snes:
+  sequence:
+    - service: python_script.tv_power_and_source
+      data:
+        source_command: 'tv_input_hdmi1'
+    - service: switch.toggle
+      entity_id: switch.hdmi_switch_3
+    - service: switch.turn_off
+      entity_id: switch.ps4
 remote_control:
   sequence:
 roku_ok:

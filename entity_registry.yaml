@@ -1,87 +1,205 @@
 climate.hallway:
+  config_entry_id:
+  name:
   platform: nest
   unique_id: 2lk53H8pCMWVd837yvzjqgKjTAe5OhDy
 switch.feeder:
+  config_entry_id:
+  name:
   platform: wemo
   unique_id: 221549K0100221
 switch.christmas_tree_lights:
+  config_entry_id:
+  name:
   platform: wemo
   unique_id: 221610K0102807
 light.kitchen_lights_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 3-72057594093076481
 light.bedroom_lights_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 12-72057594244071425
 switch.entry_lights_switch:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 13-72057594260832256
 switch.entry_lights_door:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 13-144115188298760192
 switch.entry_lights_porch:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 13-216172782336688128
 light.awkward_lights_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 14-72057594277625857
 light.dining_room_lights_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 15-72057594294403073
 switch.patio_light_switch:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 16-72057594311163904
 light.living_room_lights_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 17-72057594327957505
 switch.garage_outlet_switch:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 18-72057594344718336
 binary_sensor.back_door_sensor:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594361675776
 sensor.back_door_alarm_type:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740737
 sensor.back_door_alarm_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740753
 sensor.back_door_sourcenodeid:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740769
 sensor.back_door_access_control:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740881
 sensor.back_door_burglar:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740897
 sensor.back_door_power_management:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 19-72057594362740913
 lock.front_door_locked:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379272192
 sensor.front_door_alarm_type:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379517953
 sensor.front_door_alarm_level:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379517969
 sensor.front_door_sourcenodeid:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379517985
 sensor.front_door_access_control:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379518097
 sensor.front_door_burglar:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379518113
 sensor.front_door_power_management:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379518129
 sensor.front_door_system:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 20-72057594379518145
 switch.doorbell_switch:
+  config_entry_id:
+  name:
   platform: zwave
   unique_id: 21-72057594395049984
+zwave.aeotec_zw090_zstick_gen5_us:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-1
+zwave.kitchen_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-3
+zwave.bedroom_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-12
+zwave.entry_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-13
+zwave.awkward_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-14
+zwave.dining_room_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-15
+zwave.patio_light:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-16
+zwave.living_room_lights:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-17
+zwave.garage_outlet:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-18
+zwave.back_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-19
+zwave.front_door:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-20
+zwave.doorbell:
+  config_entry_id:
+  name:
+  platform: zwave
+  unique_id: node-21

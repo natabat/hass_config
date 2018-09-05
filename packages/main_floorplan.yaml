@@ -1,5 +1,7 @@
 homeassistant:
   customize:
+      script.toggle_garage_door:
+        friendly_name: Garage Door
       script.main_floorplan:
         custom_ui_state_card: state-card-floorplan
         config:

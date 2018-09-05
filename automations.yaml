@@ -13,6 +13,7 @@
       entity_id: switch.patio_light_switch
     service: switch.turn_off
   alias: Back Door Close
+  initial_state: true
   condition: []
   id: '1514217421324'
   trigger:
@@ -20,3 +21,18 @@
     from: 'on'
     platform: state
     to: 'off'
+- id: '1536118483145'
+  alias: PS4 off with TV
+  trigger:
+  - entity_id: switch.tv_power
+    from: 'on'
+    platform: state
+    to: 'off'
+  condition:
+  - condition: state
+    entity_id: switch.ps4
+    state: 'on'
+  action:
+  - data:
+      entity_id: switch.ps4
+    service: switch.turn_off

@@ -31,7 +31,7 @@ input_boolean:
 script:
   happy_belly_button:
     sequence:
-      #service: script.toggle_garage_door
+      service: script.toggle_garage_door
       #service: input_boolean.turn_off
       #data:
         #entity_id: input_boolean.cat_meal
