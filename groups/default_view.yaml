@@ -34,6 +34,7 @@ front_door:
     - switch.entry_lights_door
     - switch.entry_lights_porch
     - light.porch_bulb
+    - switch.doorbell_switch
 garage:
   name: Garage
   view: no

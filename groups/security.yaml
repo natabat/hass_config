@@ -6,6 +6,7 @@ security:
     - binary_sensor.back_door_open
     - binary_sensor.garage_door_open
     - group.locks
+    - group.lock_codes
     - group.cameras
     - group.batteries
 cameras:
@@ -17,8 +18,19 @@ locks:
   name: Locks
   view: no
   entities:
-    - lock.front_door_lock
+    - lock.front_door_locked
     - alarm_control_panel.arlo_base
+lock_codes:
+  name: Lock Codes
+  view: no
+  entities:
+    - input_select.lock_code_edit
+    - input_text.lock_slot_edit_name
+    - input_text.lock_slot_edit_hint
+    - input_text.lock_slot_edit_code
+    - script.generate_random_code
+    - script.set_selected_code
+    #- script.clear_selected_code
 batteries:
     name: Batteries
     view: no

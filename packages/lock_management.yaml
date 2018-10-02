@@ -1,0 +1,165 @@
+homeassistant:
+  customize:
+    input_text.lock_slot_edit_name:
+      friendly_name: Name
+    input_text.lock_slot_edit_hint:
+      friendly_name: Hint
+    input_text.lock_slot_edit_code:
+      friendly_name: Code
+    script.generate_random_code:
+      friendly_name: Generate Random Code
+    script.set_selected_code:
+      friendly_name: Set Code
+input_text:
+  lock_slot1_name:
+    initial: Cassidy
+  lock_slot1_code:
+    initial: <initials>
+  lock_slot2_name:
+    initial: Natalie
+  lock_slot2_code:
+    initial: <N>
+  lock_slot3_name:
+    initial: van der Cobbs
+  lock_slot3_code:
+    initial: <address>
+  lock_slot4_name:
+    initial: Solomons
+  lock_slot4_code:
+    initial: <address>
+  lock_slot5_name:
+    name: Slot5 Name
+  lock_slot5_code:
+    name: Slot5 Code
+  lock_slot6_name:
+    name: Slot6 Name
+  lock_slot6_code:
+    name: Slot6 Code
+  lock_slot7_name:
+    name: Slot7 Name
+  lock_slot7_code:
+    name: Slot7 Code
+  lock_slot8_name:
+    name: Slot8 Name
+  lock_slot8_code:
+    name: Slot8 Code
+  lock_slot9_name:
+    name: Slot9 Name
+  lock_slot9_code:
+    name: Slot9 Code
+  lock_slot10_name:
+    initial: Dog
+  lock_slot10_code:
+    initial: <Didi>
+  lock_slot_edit_name:
+    initial: Make a selection
+  lock_slot_edit_code:
+    pattern: \d\d\d\d
+  lock_slot_edit_hint:
+    initial: Make a selection
+  lock_slot_edit_slot:
+    initial: 1
+input_select:
+  lock_code_edit:
+    name: Set Lock Code
+    options:
+      - [loading]
+automation:
+  - alias: Update Lock Code slots
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: 
+        - input_text.lock_slot1_code
+        - input_text.lock_slot2_code
+        - input_text.lock_slot3_code
+        - input_text.lock_slot4_code
+        - input_text.lock_slot5_code
+        - input_text.lock_slot6_code
+        - input_text.lock_slot7_code
+        - input_text.lock_slot8_code
+        - input_text.lock_slot9_code
+        - input_text.lock_slot10_code
+      - platform: homeassistant
+        event: start
+    action:
+      - service: input_select.set_options
+        data_template:
+          entity_id: input_select.lock_code_edit
+          options:
+            -  1 - {{ states("input_text.lock_slot1_name") }}
+            -  2 - {{ states("input_text.lock_slot2_name") }}
+            -  3 - {{ states("input_text.lock_slot3_name") }}
+            -  4 - {{ states("input_text.lock_slot4_name") }}
+            -  5 - {{ states("input_text.lock_slot5_name") }}
+            -  6 - {{ states("input_text.lock_slot6_name") }}
+            -  7 - {{ states("input_text.lock_slot7_name") }}
+            -  8 - {{ states("input_text.lock_slot8_name") }}
+            -  9 - {{ states("input_text.lock_slot9_name") }}
+            - 10 - {{ states("input_text.lock_slot10_name") }}
+  - alias: Update Lock Code Edit Fields
+    initial_state: 'on'
+    trigger:
+      - platform: state
+        entity_id: input_select.lock_code_edit
+    action:
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_slot
+          value: "{{ states('input_select.lock_code_edit')[:2] | int }}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_name
+          value: "{{ states('input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_name') }}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_hint
+          value: "{{ states('input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_code') }}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_code
+          value: "{{ states('input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_code') }}"
+script:
+  # clear_selected_code:
+    # sequence:
+      # - service: lock.clear_usercode
+        # data_template:
+          # node_id: "{{states.lock.front_door_locked.attributes['node_id']}}"
+          # code_slot: "{{states('input_text.lock_slot_edit_slot')}}"
+      # - service: input_text.set_value
+        # data_template:
+          # entity_id: "{{'input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_name'}}"
+          # value: Empty
+      # - service: input_text.set_value
+        # data_template:
+          # entity_id: "{{'input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_code'}}"
+          # value: <empty>
+  set_selected_code:
+    sequence:
+      - service: lock.set_usercode
+        data_template:
+          node_id: "{{states.lock.front_door_locked.attributes['node_id']}}"
+          code_slot: "{{states('input_text.lock_slot_edit_slot')}}"
+          usercode: "{{states('input_text.lock_slot_edit_code')}}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: "{{'input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_name'}}"
+          value: "{{states('input_text.lock_slot_edit_name')}}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: "{{'input_text.lock_slot'~states('input_text.lock_slot_edit_slot')~'_code'}}"
+          value: "{{states('input_text.lock_slot_edit_hint')}}"
+  generate_random_code:
+    sequence:
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_code
+          value: "{{ range(1000, 9999) | random }}"
+      - service: input_text.set_value
+        data_template:
+          entity_id: input_text.lock_slot_edit_hint
+          value: "{{states('input_text.lock_slot_edit_code')}}"
+      
+      
+          
+      

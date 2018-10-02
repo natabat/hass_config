@@ -5,6 +5,10 @@ homeassistant:
   elevation: !secret home_elev
   unit_system: !secret home_units
   time_zone: !secret home_time_zone
+  
+  auth_providers:
+   - type: homeassistant
+   - type: legacy_api_password
 
   customize: !include_dir_merge_named customizations
   packages: !include_dir_named packages

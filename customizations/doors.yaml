@@ -6,3 +6,5 @@ script.shut_it_down:
   friendly_name: Shut It Down
 sensor.battery_level_door_cam:
   friendly_name: Door Cam Battery
+switch.doorbell_switch:
+  friendly_name: Doorbell
