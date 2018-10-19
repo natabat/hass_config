@@ -8,19 +8,23 @@
     from: home
     platform: state
     to: not_home
-- action:
-  - data:
-      entity_id: switch.patio_light_switch
-    service: switch.turn_off
+- id: '1514217421324'
   alias: Back Door Close
-  initial_state: true
-  condition: []
-  id: '1514217421324'
   trigger:
   - entity_id: binary_sensor.back_door_sensor
     from: 'on'
     platform: state
     to: 'off'
+  - entity_id: sensor.period_of_day
+    from: '''night'''
+    platform: state
+    to: '''dawn'''
+  condition: []
+  action:
+  - data:
+      entity_id: switch.patio_light_switch
+    service: switch.turn_off
+  initial_state: true
 - id: '1536118483145'
   alias: PS4 off with TV
   trigger:
