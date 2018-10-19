@@ -29,9 +29,13 @@ input_boolean:
 #    name: Feed Dexter
 #    initial: off
 script:
+  # this button is broken
   happy_belly_button:
     sequence:
-      service: script.toggle_garage_door
+      service: input_boolean.turn_off
+      data:
+        entity_id: input_boolean.dog_meal
+      #service: script.toggle_garage_door
       #service: input_boolean.turn_off
       #data:
         #entity_id: input_boolean.cat_meal
