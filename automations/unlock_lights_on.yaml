@@ -8,9 +8,9 @@ trigger:
   from: 'locked'
   to: 'unlocked'
 condition:
-  condition: sun
-  after: sunset
-  after_offset: "-0:30:00"
+  condition: state
+  entity_id: sensor.period_of_day
+  state: 'dusk'
 action:
   service: homeassistant.turn_on
   entity_id: switch.entry_lights_switch

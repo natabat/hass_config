@@ -5,17 +5,15 @@ trigger:
     entity_id: binary_sensor.back_door_sensor
     from: 'off'
     to: 'on'
-  - platform: sun
-    event: sunset
+  - platform: state
+    entity_id: sensor.period_of_day
+    to: 'night'
 condition:
   condition: and
   conditions:
-    - condition: or
-      conditions:
-        - condition: sun
-          after: sunset
-        - condition: sun
-          before: sunrise
+    - condition: state
+      entity_id: sensor.period_of_day
+      state: 'night'
     - condition: state
       entity_id: binary_sensor.back_door_sensor
       state: 'on'

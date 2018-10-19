@@ -25,6 +25,7 @@ climate:
     - sensor.home_weather_daily_high_apparent_temperature
     - sensor.home_weather_hourly_summary
     - sensor.home_weather_daily_summary
+    - sensor.period_of_day
 front_door:
   name: Front Door
   view: no

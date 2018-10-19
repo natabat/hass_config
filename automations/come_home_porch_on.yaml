@@ -8,12 +8,9 @@ trigger:
     entity_id: device_tracker.cassidy
     to: 'home'
 condition:
-  condition: or
-  conditions:
-    - condition: sun
-      after: sunset
-    - condition: sun
-      before: sunrise
+  condition: state
+  entity_id: sensor.period_of_day
+  state: 'night'
 action:
   service: switch.turn_on
   data:

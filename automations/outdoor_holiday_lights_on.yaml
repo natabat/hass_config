@@ -1,7 +1,8 @@
 alias: Outdoor Lights On
 trigger:
-  - platform: time
-    at: '17:00:00'
+  - platform: state
+    entity_id: sensor.period_of_day
+    to: 'night'    
 action:
   - service: homeassistant.turn_on
     entity_id: group.outdoor_holiday_lights
