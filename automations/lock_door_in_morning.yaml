@@ -1,4 +1,4 @@
-alias: We're in bed, shut down
+alias: Lock Door in Morning
 initial_state: True
 trigger:
   - platform: state

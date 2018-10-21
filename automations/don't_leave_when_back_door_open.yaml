@@ -1,0 +1,25 @@
+alias: "Don't leave when back door open"
+initial_state: True
+trigger:
+  platform: state
+  entity_id: sensor.front_door_alarm_type
+  to: '18'
+condition:
+  condition: and
+  conditions:
+    - condition: state
+      entity_id: binary_sensor.back_door_sensor
+      state: 'on'
+    - condition: or
+      conditions:
+      - condition: state
+        entity_id: device_tracker.cassidy
+        state: 'not_home'
+      - condition: template
+        value_template: "{{states.device_tracker.natalie.state != 'home'}}"
+action:
+  - service: python_script.porch_bulb_alarm
+  - service: notify.natalie
+    data:
+      message: The back door is open and someone tried to leave!
+  
