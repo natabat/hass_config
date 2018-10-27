@@ -2,6 +2,7 @@
     "data": {
         "entries": [
             {
+                "connection_class": "unknown",
                 "data": {
                     "impl_domain": "nest",
                     "tokens": {
@@ -13,6 +14,18 @@
                 "entry_id": "7be959ab9a0e4f8dbd98f66dff65c5ee",
                 "source": "import",
                 "title": "Nest (import from configuration.yaml)",
+                "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {
+                    "network_key": "0x09, 0x0F, 0x04, 0x68, 0xE6, 0x9D, 0xAE, 0xE5, 0x0B, 0x1B, 0x9F, 0x5E, 0x10, 0x5C, 0x59, 0xA5",
+                    "usb_path": "/dev/zwave"
+                },
+                "domain": "zwave",
+                "entry_id": "b4d67e2163884aeebad483fc23a8e61d",
+                "source": "import",
+                "title": "Z-Wave (import from configuration.yaml)",
                 "version": 1
             }
         ]

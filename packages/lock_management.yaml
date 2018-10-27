@@ -63,7 +63,7 @@ input_select:
   lock_code_edit:
     name: Set Lock Code
     options:
-      - [loading]
+      - loading...
 automation:
   - alias: Update Lock Code slots
     initial_state: 'on'
