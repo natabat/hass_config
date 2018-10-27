@@ -70,6 +70,9 @@ http:
     - 20.20.20.0/24
     - 127.0.0.1
     - ::1
+  ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
+  ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
+  base_url: fiddlersgreen.duckdns.org:8123
     
   #ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
   #ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem

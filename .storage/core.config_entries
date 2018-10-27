@@ -27,6 +27,17 @@
                 "source": "import",
                 "title": "Z-Wave (import from configuration.yaml)",
                 "version": 1
+            },
+            {
+                "connection_class": "unknown",
+                "data": {
+                    "webhook_id": "21e497e4e3d24264663bd081458d7cfc0e4f9d64de4b224972cb7aff12876251"
+                },
+                "domain": "ifttt",
+                "entry_id": "90700400a4f94e91ac83c7e381fdcd8f",
+                "source": "user",
+                "title": "IFTTT Webhook",
+                "version": 1
             }
         ]
     },
