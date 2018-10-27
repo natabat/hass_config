@@ -13,6 +13,6 @@ shut_it_down:
     - condition: state
       entity_id: binary_sensor.back_door_sensor
       state: 'on'
-    - service: notify.out_phones
+    - service: notify.our_phones
       data:
         message: Go close the back door!
