@@ -8,7 +8,7 @@ trigger:
   to: 'unlocked'
 condition:
   condition: state
-  entity_id: group.us
+  entity_id: group.anyone
   state: 'not_home'
 action:
   service: notify.natalie

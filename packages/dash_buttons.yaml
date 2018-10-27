@@ -1,15 +1,15 @@
-alert:
-  dog_meal:
-    name: Feed Didi!
-    entity_id: input_boolean.dog_meal
-    state: 'on'
-    repeat:
-      - 60
-      - 30
-      - 15
-    skip_first: true
-    notifiers:
-      - natalie
+# alert:
+  # dog_meal:
+    # name: Feed Didi!
+    # entity_id: input_boolean.dog_meal
+    # state: 'on'
+    # repeat:
+      # - 60
+      # - 30
+      # - 15
+    # skip_first: true
+    # notifiers:
+      # - natalie
 #  cat_meal:
 #    name: Feed Dexter!
 #    entity_id: input_boolean.cat_meal
@@ -45,6 +45,46 @@ script:
       data:
         entity_id: input_boolean.dog_meal
 automation:
+  - alias: Remind Natalie to feed the dog when someone's home
+    initial_state: true
+    trigger:
+      - platform: state
+        entity_id: input_boolean.dog_meal
+        to: 'on'
+        for:
+          minutes: 30
+      - platform: state
+        entity_id: group.us
+        to: 'home'
+    condition:
+      condition: and
+      conditions:
+        - condition: state
+          entity_id: input_boolean.dog_meal
+          state: 'on'
+        - condition: state
+          entity_id: group.us
+          state: 'home'
+    action:
+      service: notify.push_natalie_s8
+      data:
+        message: "Didi is hungry!"
+        data:
+          tag: dog_meal
+          renotify: true
+          requireInteraction: true
+          actions:
+            action: 'dog_fed'
+            title: 'OK OK!'
+  - alias: Respond to dog notification
+    trigger:
+      platform: event
+      event_type: html5_notification.clicked
+      event_data:
+        action: dog_fed
+    action:
+      service: input_boolean.turn_off
+      entity_id: input_boolean.dog_meal
   - alias: Dash Button Press
     initial_state: True
     trigger:
@@ -75,9 +115,9 @@ automation:
     initial_state: True
     trigger:
       - platform: time
-        at: '05:00:00'
+        at: '06:00:00'
       - platform: time
-        at: '15:30:00'
+        at: '16:30:00'
     action:
       service: input_boolean.turn_on
       data:

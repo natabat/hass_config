@@ -3,7 +3,7 @@ trigger:
   - platform: time
     at: '17:00:00'
   - platform: state
-    entity_id: group.us
+    entity_id: group.anyone
     to: 'home'
 condition:
   condition: and
@@ -11,7 +11,7 @@ condition:
     - condition: time
       after: '17:00:00'
     - condition: state
-      entity_id: group.us
+      entity_id: group.anyone
       state: 'home'
 action:
   - service: homeassistant.turn_on

@@ -4,7 +4,7 @@
   condition: []
   id: '1512665448871'
   trigger:
-  - entity_id: group.us
+  - entity_id: group.anyone
     from: home
     platform: state
     to: not_home

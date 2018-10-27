@@ -27,7 +27,7 @@ cover: !include covers.yaml
 device_tracker: !include device_tracker.yaml
 device_sun_light_trigger:
   light_group: group.sunset_lights
-  device_group: group.us
+  device_group: group.anyone
 group: !include_dir_merge_named groups/
 input_boolean: !include booleans.yaml
 input_datetime: !include datetimes.yaml
@@ -73,13 +73,6 @@ http:
   ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
   ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
   base_url: fiddlersgreen.duckdns.org:8123
-    
-  #ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
-  #ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
-  #base_url: fiddlersgreen.duckdns.org:8123
-  #trusted_networks:
-  #  - 192.168.1.1/24
-  #  - 20.20.20.1/24
 logbook:
 python_script:
 recorder:
@@ -91,7 +84,7 @@ sun:
 updater:
 
 logger:
-  default: critical
+  default: error
   logs:
     pyarlo: error
     pyHS100.protocol: error
