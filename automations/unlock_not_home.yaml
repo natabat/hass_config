@@ -11,6 +11,6 @@ condition:
   entity_id: group.anyone
   state: 'not_home'
 action:
-  service: notify.natalie
+  service: notify.our_phones
   data:
     message: Your door unlocked, but no one is home!
