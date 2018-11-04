@@ -10,9 +10,9 @@ holiday:
   control: hidden
   entities:
     - light.christmas_tree_lights
-    - light.porch_bulb
+    - light.tplink_light
     - switch.garage_outlet
     - switch.entry_lights_porch
     - automation.tree_lights_on
     - automation.outdoor_lights_on
-    - automation.porch_colors_winter
+    #- automation.porch_colors_winter

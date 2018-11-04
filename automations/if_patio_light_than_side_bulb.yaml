@@ -1,0 +1,9 @@
+alias: If patio light than side bulb
+initial_state: True
+trigger:
+  platform: state
+  entity_id: switch.patio_light_switch
+action:
+  service_template: >
+    light.turn_{{ trigger.to_state.state }}
+  entity_id: light.side_bulb

@@ -9,4 +9,5 @@
   platform: group
   services:
     - service: push_natalie_s8
+    - service: push_cassidy_pixel3
   

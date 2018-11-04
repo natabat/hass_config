@@ -35,6 +35,9 @@ switch.patio_light_switch:
   friendly_name: Patio Light
   icon: mdi:tree
   emulated_hue_hidden: false
+light.side_bulb:
+  friendly_name: Side Light
+  icon: mdi:delete-empty
 group.lights:
   friendly_name: Lights
   emulated_hue_hidden: false
