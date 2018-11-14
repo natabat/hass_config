@@ -60,6 +60,7 @@ homeassistant:
               entities:
                 - light.bedroom_lights_level
                 - switch.garage_exterior_lights
+                - light.side_bulb
               groups:
                   - group.common_lights
               action:

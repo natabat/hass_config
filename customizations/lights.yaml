@@ -20,6 +20,9 @@ switch.entry_lights_door:
 switch.entry_lights_porch:
   friendly_name: Porch Light
   icon: mdi:castle
+switch.garage_exterior_lights:
+  friendly_name: Garage Exterior Lights
+  icon: mdi:lighthouse
 switch.holiday_lights:
   icon: mdi:pine-tree
   emulated_hue_hidden: false
