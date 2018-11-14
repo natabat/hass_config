@@ -4,6 +4,7 @@ misc:
   entities:
     - group.holiday
     - input_boolean.guest_present
+    - group.solar
 holiday:
   name: Holidays
   view: no
@@ -16,3 +17,9 @@ holiday:
     - automation.tree_lights_on
     - automation.outdoor_lights_on
     #- automation.porch_colors_winter
+solar:
+  - sensor.power_consumption
+  - sensor.energy_consumption
+  - sensor.power_generation
+  - sensor.energy_generation
+  
