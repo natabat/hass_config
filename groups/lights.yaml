@@ -30,6 +30,7 @@ lights:
     - switch.patio_light_switch
     - light.side_bulb
     - switch.christmas_tree_lights
+    - switch.bedroom_hallway
 common_lights:
   name: Common Lights
   view: no

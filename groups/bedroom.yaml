@@ -3,6 +3,7 @@ bedroom:
   view: yes
   entities:
     - light.bedroom_lights_level
+    - switch.bedroom_hallway
     - group.alarm
     - group.going_to_bed
     - group.animals

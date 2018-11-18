@@ -29,3 +29,5 @@ smart_home:
       display_categories: LIGHT
     group.lights:
       display_categories: LIGHT
+    switch.bedroom_hallway:
+      display_categories: LIGHT
