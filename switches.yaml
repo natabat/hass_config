@@ -56,3 +56,24 @@
         service: script.ps4_on
       turn_off:
         service: script.ps4_off
+    netflix:
+      friendly_name: Netflix
+      value_template: "{{ is_state('sensor.roku_channel', 'Netflix') }}"
+      turn_on:
+        service: script.netflix
+      turn_off:
+        service: rest_command.roku_home
+    hulu:
+      friendly_name: Hulu
+      value_template: "{{ is_state('sensor.roku_channel', 'Hulu') }}"
+      turn_on:
+        service: script.hulu
+      turn_off:
+        service: rest_command.roku_home
+    prime:
+      friendly_name: Prime
+      value_template: "{{ is_state('sensor.roku_channel', 'Amazon Prime Video') }}"
+      turn_on:
+        service: script.prime
+      turn_off:
+        service: rest_command.roku_home

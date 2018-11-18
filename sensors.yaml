@@ -146,3 +146,7 @@
       value_template: '{% if is_state_attr("sensor.pvoutput", "energy_generation", "NaN") %}0{% else %}{{ "%0.2f"|format(states.sensor.pvoutput.attributes.energy_generation|float/1000) }}{% endif %}'
       friendly_name: 'Generated'
       unit_of_measurement: 'kWh'
+- platform: rest
+  resource: http://192.168.1.24:8060/query/active-app
+  name: Roku Channel
+  value_template: '{{value | striptags}}'

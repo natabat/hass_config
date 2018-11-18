@@ -88,15 +88,15 @@ script.remote_control:
         icon: mdi:volume-plus
         column: 3
         row: 5
-      - entity: script.netflix
+      - entity: switch.netflix
         icon: mdi:netflix
         column: 1
         row: 6
-      - entity: script.hulu
+      - entity: switch.hulu
         icon: mdi:hulu
         column: 2
         row: 6
-      - entity: script.prime
+      - entity: switch.prime
         icon: mdi:amazon
         column: 3
         row: 6
