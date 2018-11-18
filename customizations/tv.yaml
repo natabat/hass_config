@@ -1,28 +1,20 @@
 switch.tv_power:
   icon: mdi:television-classic
-  emulated_hue_hidden: false
   friendly_name: TV
 script.hulu:
   icon: mdi:hulu
-  emulated_hue_hidden: false
 script.netflix:
   icon: mdi:netflix
-  emulated_hue_hidden: false
 script.nintendo_switch:
   icon: mdi:nintendo-switch
-  emulated_hue_hidden: false
 script.ps4:
   icon: mdi:playstation
-  emulated_hue_hidden: false
 script.snes:
   icon: mdi:gamepad
-  emulated_hue_hidden: false
 script.prime:
   icon: mdi:amazon
-  emulated_hue_hidden: false
 script.steam:
   icon: mdi:steam
-  emulated_hue_hidden: false
 script.toggle_stereo:
   friendly_name: Stereo Power
   icon: mdi:power

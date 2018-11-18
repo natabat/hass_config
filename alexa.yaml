@@ -1,0 +1,30 @@
+smart_home:
+  filter:
+    include_domains:
+      - switch
+      - light
+      - lock
+      - cover
+    exclude_entities:
+      - switch.doorbell_switch
+      - switch.stereo_plug
+      - switch.entry_lights_switch
+      - switch.hdmi_switch_1
+      - switch.hdmi_switch_2
+      - switch.hdmi_switch_3
+    include_entities:
+      - script.shut_it_down
+      - group.lights
+  entity_config:
+    lock.front_door_lock:
+      name: Front Door
+    switch.entry_lights_door:
+      display_categories: LIGHT
+    switch.entry_lights_porch:
+      display_categories: LIGHT
+    switch.garage_exterior_lights:
+      display_categories: LIGHT
+    switch.patio_light_switch:
+      display_categories: LIGHT
+    group.lights:
+      display_categories: LIGHT

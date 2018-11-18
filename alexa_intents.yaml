@@ -1,5 +1,5 @@
 # shut it down
-amzn1.ask.skill.cd365ac0-9b13-4578-8394-03bd21b277b9:
+amzn1.ask.skill.c871dffb-8ce4-493f-86e1-ae342ecda2ce:
   action:
     service: script.turn_on
     data:

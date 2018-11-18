@@ -46,4 +46,13 @@
       command_off: 'ps4-waker standby'
       command_state: 'ps4-waker search | grep -q "200 Ok" && (echo "true") || (echo "false")' 
       value_template: '{{ value }}'
-      friendly_name: "Playstation 4"
+      friendly_name: "Playstation 4 command"
+# - platform: template
+  # switches:
+    # playstation:
+      # friendly_name: Playstation
+      # value_template: "{{ is_state('switch.ps4', 'on') }}"
+      # turn_on:
+        # service: script.ps4
+      # turn_off:
+        # service: script.ps4_off

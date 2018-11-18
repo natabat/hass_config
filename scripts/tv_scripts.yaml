@@ -45,6 +45,11 @@ ps4:
       entity_id: switch.ps4
     - service: switch.toggle
       entity_id: switch.hdmi_switch_2
+# ps4_off:
+  # sequence:
+    # - service: switch.turn_off
+      # entity_id: switch.ps4
+    # - service: rest_command.roku_home
 snes:
   sequence:
     - service: python_script.tv_power_and_source
