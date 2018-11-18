@@ -7,7 +7,7 @@ script.netflix:
   icon: mdi:netflix
 script.nintendo_switch:
   icon: mdi:nintendo-switch
-script.ps4:
+switch.ps4:
   icon: mdi:playstation
 script.snes:
   icon: mdi:gamepad
@@ -104,7 +104,7 @@ script.remote_control:
         icon: mdi:nintendo-switch
         column: 1
         row: 7
-      - entity: script.ps4
+      - entity: switch.ps4
         icon: mdi:playstation
         column: 2
         row: 7

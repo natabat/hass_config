@@ -41,18 +41,18 @@
       command_off: 'curl -X POST http://192.168.1.24:8060/keypress/PowerOff'
       command_state: 'curl -s GET http://192.168.1.24:8060/query/device-info | grep power-mode | sed -e "s:.*<power-mode>DisplayOff</power-mode>:OFF:" -e "s:.*<power-mode>PowerOn</power-mode>:ON:" || echo OFF'
       value_template: '{{ value == "ON" }}'
-    ps4:
+    ps4_command:
       command_on: 'ps4-waker'
       command_off: 'ps4-waker standby'
       command_state: 'ps4-waker search | grep -q "200 Ok" && (echo "true") || (echo "false")' 
       value_template: '{{ value }}'
       friendly_name: "Playstation 4 command"
-# - platform: template
-  # switches:
-    # playstation:
-      # friendly_name: Playstation
-      # value_template: "{{ is_state('switch.ps4', 'on') }}"
-      # turn_on:
-        # service: script.ps4
-      # turn_off:
-        # service: script.ps4_off
+- platform: template
+  switches:
+    ps4:
+      friendly_name: Playstation
+      value_template: "{{ is_state('switch.ps4_command', 'on') }}"
+      turn_on:
+        service: script.ps4_on
+      turn_off:
+        service: script.ps4_off

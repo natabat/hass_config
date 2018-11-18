@@ -34,9 +34,9 @@
     to: 'off'
   condition:
   - condition: state
-    entity_id: switch.ps4
+    entity_id: switch.ps4_command
     state: 'on'
   action:
   - data:
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
     service: switch.turn_off

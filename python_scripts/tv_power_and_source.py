@@ -12,6 +12,7 @@ while states.state == 'off':
 	input_data = {'entity_id': tv_switch_entity}
 	hass.services.call('switch', 'turn_on', input_data)
 	states = hass.states.get(tv_switch_entity)
+	time.sleep(1)
 
 # run the given rest command
 hass.services.call('rest_command', source_command)

@@ -19,4 +19,4 @@ debug:
     - switch.hdmi_switch_1
     - switch.hdmi_switch_2
     - switch.hdmi_switch_3
-    - switch.ps4
+    - switch.ps4_command

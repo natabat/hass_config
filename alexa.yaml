@@ -12,6 +12,7 @@ smart_home:
       - switch.hdmi_switch_1
       - switch.hdmi_switch_2
       - switch.hdmi_switch_3
+      - switch.ps4_command
     include_entities:
       - script.shut_it_down
       - group.lights

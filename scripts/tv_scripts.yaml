@@ -12,21 +12,21 @@ broadcast:
       data:
         source_command: 'tv_input_tuner'
     - service: switch.turn_off
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
 hulu:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_hulu'
     - service: switch.turn_off
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
 netflix:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_netflix'
     - service: switch.turn_off
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
 nintendo_switch:
   sequence:
     - service: python_script.tv_power_and_source
@@ -35,21 +35,21 @@ nintendo_switch:
     - service: switch.toggle
       entity_id: switch.hdmi_switch_1
     - service: switch.turn_off
-      entity_id: switch.ps4
-ps4:
+      entity_id: switch.ps4_command
+ps4_on:
   sequence:
     - service: python_script.tv_power_and_source
       data:
         source_command: 'tv_input_hdmi1'
     - service: switch.turn_on
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
     - service: switch.toggle
       entity_id: switch.hdmi_switch_2
-# ps4_off:
-  # sequence:
-    # - service: switch.turn_off
-      # entity_id: switch.ps4
-    # - service: rest_command.roku_home
+ps4_off:
+  sequence:
+    - service: switch.turn_off
+      entity_id: switch.ps4_command
+    - service: rest_command.roku_home
 snes:
   sequence:
     - service: python_script.tv_power_and_source
@@ -58,7 +58,7 @@ snes:
     - service: switch.toggle
       entity_id: switch.hdmi_switch_3
     - service: switch.turn_off
-      entity_id: switch.ps4
+      entity_id: switch.ps4_command
 remote_control:
   sequence:
 roku_ok:
