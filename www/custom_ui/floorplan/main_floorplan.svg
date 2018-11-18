@@ -25,7 +25,7 @@
    inkscape:pageopacity="0.0"
    inkscape:pageshadow="2"
    inkscape:zoom="0.99999999"
-   inkscape:cx="278.58748"
+   inkscape:cx="150.58748"
    inkscape:cy="497.38049"
    inkscape:document-units="px"
    inkscape:current-layer="svg2"
@@ -57,7 +57,7 @@
       <dc:format>image/svg+xml</dc:format>
       <dc:type
          rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-      <dc:title></dc:title>
+      <dc:title />
     </cc:Work>
   </rdf:RDF>
 </metadata>
@@ -105,6 +105,7 @@
 
 
 
+
 0&quot;
        sodipodi:nodetypes=&quot;ccccc&quot;
        inkscape:label=&quot;MasterCloset&quot; /&gt;
@@ -121,6 +122,7 @@
    id="switch.master_hall_light"
    d=""
    style="fill:#ff0000;fill-opacity:1;stroke:none;stroke-opacity:1" />
+
 
 
 
@@ -159,6 +161,7 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
 
 
 
+
 0&quot;
        sodipodi:nodetypes=&quot;ccccc&quot;
        inkscape:label=&quot;GameRoom&quot; /&gt;
@@ -167,6 +170,7 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
    d="m 394.77272,437.84646 178.1818,0 0,140 -178.1818,0 z"
    id="switch.guest_room_light"
    inkscape:connector-curvature="0" />
+
 
 
 
@@ -197,6 +201,7 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
 
 
 
+
 0&quot;
        sodipodi:nodetypes=&quot;ccccc&quot;
        inkscape:label=&quot;#rect4171&quot; /&gt;
@@ -209,7 +214,7 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
 <path
    style="display:inline;opacity:0.95;fill:#ffffff;fill-opacity:0.99686273;stroke:none;stroke-width:0.625;stroke-linecap:square;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    d="m 375.68181,253.301 66.81818,0 0,63.63637 -66.81818,0 z"
-   id="switch.master_hall_lights"
+   id="switch.bedroom_hallway"
    inkscape:connector-curvature="0"
    sodipodi:nodetypes="ccccc"
    inkscape:label="#rect4184" />
@@ -276,6 +281,7 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
    id="path5736"
    d="m 292.95456,253.301 0,224 m -105.63127,0 -47.096,0 0,-122.18181"
    style="display:inline;opacity:0.95;fill:none;fill-opacity:1;stroke:none;stroke-width:6.36400032;stroke-linecap:square;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1" />
+
 
 
 
@@ -559,4 +565,21 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
    d="m 10.499989,293.75574 a 10.500001,10.500002 0 0 0 -10.49998995367432,10.5 c 0,3.57 1.78499995367432,6.705 4.49999995367432,8.61 l 0,3.39 a 1.5000001,1.5000002 0 0 0 1.5,1.5 l 8.99999,0 a 1.5000001,1.5000002 0 0 0 1.5,-1.5 l 0,-3.39 c 2.715,-1.905 4.5,-5.04 4.5,-8.61 a 10.500001,10.500002 0 0 0 -10.5,-10.5 m -4.49999,28.5 a 1.5000001,1.5000002 0 0 0 1.5,1.5 l 5.99999,0 a 1.5000001,1.5000002 0 0 0 1.5,-1.5 l 0,-1.5 -8.99999,0 0,1.5 z"
    id="light.side_bulb"
    inkscape:label="#path4219" />
+<text
+   xml:space="preserve"
+   style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#000000;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+   x="410.90134"
+   y="282.03644"
+   id="text4206-7"
+   sodipodi:linespacing="125%"><tspan
+     sodipodi:role="line"
+     id="tspan4208-2"
+     x="410.90134"
+     y="282.03644"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle">Bedroom</tspan><tspan
+     sodipodi:role="line"
+     x="410.90134"
+     y="297.66144"
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle"
+     id="tspan4229">Hallway</tspan></text>
 </svg>

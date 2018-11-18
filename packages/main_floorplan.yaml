@@ -59,6 +59,7 @@ homeassistant:
             - name: Lights
               entities:
                 - light.bedroom_lights_level
+                - switch.bedroom_hallway
                 - switch.garage_exterior_lights
                 - light.side_bulb
               groups:
