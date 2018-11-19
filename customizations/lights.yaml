@@ -40,4 +40,7 @@ switch.garage_outlet_switch:
   icon: mdi:power-socket-us
 group.outdoor_holiday_lights:
   friendly_name: Holiday Lights
-  emulate_hue_hidden: false
+switch.nursery_light:
+  icon: mdi:baby
+switch.nursery_fan:
+  icon: mdi:fan

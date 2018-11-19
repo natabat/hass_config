@@ -13,6 +13,7 @@ smart_home:
       - switch.hdmi_switch_2
       - switch.hdmi_switch_3
       - switch.ps4_command
+      - switch.nursery_fan_light
     include_entities:
       - script.shut_it_down
       - group.lights
@@ -30,4 +31,6 @@ smart_home:
     group.lights:
       display_categories: LIGHT
     switch.bedroom_hallway:
+      display_categories: LIGHT
+    switch.nursery_light:
       display_categories: LIGHT

@@ -1,0 +1,8 @@
+nursery:
+  name: Nursery
+  view: yes
+  entities:
+    - switch.nursery_light
+    - switch.nursery_fan
+    - sensor.nursery_energy
+    - sensor.nursery_power

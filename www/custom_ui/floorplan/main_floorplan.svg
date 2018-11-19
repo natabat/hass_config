@@ -25,8 +25,8 @@
    inkscape:pageopacity="0.0"
    inkscape:pageshadow="2"
    inkscape:zoom="0.99999999"
-   inkscape:cx="150.58748"
-   inkscape:cy="497.38049"
+   inkscape:cx="252.90665"
+   inkscape:cy="297.38049"
    inkscape:document-units="px"
    inkscape:current-layer="svg2"
    showgrid="false"
@@ -148,8 +148,9 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
 <path
    style="display:inline;opacity:0.95;fill:#ffffff;fill-opacity:0.95294118;stroke:none;stroke-width:0.625;stroke-linejoin:round;stroke-miterlimit:4;stroke-dasharray:none;stroke-dashoffset:0;stroke-opacity:1"
    d="m 442.49997,253.301 130.45455,0 0,184.54546 -130.45455,0 z"
-   id="switch.game_room_light"
-   inkscape:connector-curvature="0" />
+   id="switch.nursery_light"
+   inkscape:connector-curvature="0"
+   inkscape:label="#switch.game_room_light" />
 
 
 
@@ -405,15 +406,15 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;text-align:center;letter-spacing:0px;word-spacing:0px;text-anchor:middle;display:inline;fill:#777777;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-   x="506.90329"
+   x="507.22186"
    y="349.36401"
    id="text4200"
    sodipodi:linespacing="125%"><tspan
      sodipodi:role="line"
-     x="506.90329"
+     x="507.22186"
      y="349.36401"
      id="tspan4204"
-     style="font-style:italic;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:'Arial Italic';fill:#999999;fill-opacity:1">Nursery</tspan></text>
+     style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:15px;font-family:Arial;-inkscape-font-specification:Arial;fill:#000000;fill-opacity:1">Nursery</tspan></text>
 <text
    xml:space="preserve"
    style="font-style:normal;font-weight:normal;font-size:30px;line-height:125%;font-family:sans-serif;letter-spacing:0px;word-spacing:0px;display:inline;fill:#777777;fill-opacity:1;stroke:none;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
@@ -582,4 +583,9 @@ m 94.12433,591.99663 0,6.25 -6.562498,0 0,-6.25 z&quot;
      y="297.66144"
      style="font-style:normal;font-variant:normal;font-weight:normal;font-stretch:normal;font-size:12.5px;font-family:Arial;-inkscape-font-specification:Arial;text-align:center;text-anchor:middle"
      id="tspan4229">Hallway</tspan></text>
+<path
+   id="switch.nursery_fan"
+   d="m 507.70396,374.95567 a 1.5512595,1.8 0 0 0 -1.55125,1.8 1.5512595,1.8 0 0 0 1.55125,1.8 1.5512595,1.8 0 0 0 1.55127,-1.8 1.5512595,1.8 0 0 0 -1.55127,-1.8 m 0.77564,-16.2 c 6.98066,0 7.1513,6.426 3.49034,8.55 -1.53575,0.882 -2.21831,2.772 -2.51305,4.446 0.7446,0.36 1.39613,0.918 1.89253,1.638 5.73967,-3.6 11.91368,-2.178 11.91368,4.266 0,8.1 -5.53799,8.28 -7.36848,4.014 -0.77562,-1.782 -2.41997,-2.574 -3.86264,-2.916 -0.31025,0.864 -0.79114,1.602 -1.41164,2.214 3.08701,6.642 1.86151,13.788 -3.692,13.788 -6.98065,0 -7.12027,-6.444 -3.45929,-8.568 1.52022,-0.882 2.20276,-2.754 2.51302,-4.41 -0.76012,-0.36 -1.42714,-0.936 -1.92354,-1.656 -5.72415,3.564 -11.86714,2.16 -11.86714,-4.266 0,-8.1 5.52249,-8.298 7.35298,-4.032 0.77562,1.782 2.40445,2.556 3.84712,2.898 0.29474,-0.864 0.79114,-1.62 1.42714,-2.196 -3.08699,-6.642 -1.8615,-13.77 3.66097,-13.77 z"
+   inkscape:connector-curvature="0"
+   inkscape:label="#path4233" />
 </svg>

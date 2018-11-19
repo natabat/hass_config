@@ -100,6 +100,16 @@ svg, svg * {
   fill: #fff7c4 !important;
 }
 
+/* Fan */
+
+.fan-off {
+  fill: #000000 !important;
+}
+
+.fan-on {
+  fill: #1c97eb !important;
+}
+
 /* Cover */
 .cover-open {
     fill: #FFFFFF !important;

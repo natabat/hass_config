@@ -1,0 +1,18 @@
+switch.qubino_zmnhbdx_flush_2_relays_switch:
+  ignored: false
+  polling_intensity: 0
+switch.nursery_1:
+  ignored: true
+  polling_intensity: 0
+sensor.nursery_energy_2:
+  ignored: true
+  polling_intensity: 0
+sensor.nursery_energy_3:
+  ignored: true
+  polling_intensity: 0
+sensor.nursery_power_2:
+  ignored: true
+  polling_intensity: 0
+sensor.nursery_power_3:
+  ignored: true
+  polling_intensity: 0

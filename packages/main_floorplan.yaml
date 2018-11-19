@@ -62,6 +62,8 @@ homeassistant:
                 - switch.bedroom_hallway
                 - switch.garage_exterior_lights
                 - light.side_bulb
+                - switch.nursery_fan
+                - switch.nursery_light
               groups:
                   - group.common_lights
               action:
@@ -71,6 +73,16 @@ homeassistant:
                   class: 'light-on'
                 - state: 'off'
                   class: 'light-off'
+            - name: Fans
+              entities:
+                - switch.nursery_fan
+              action:
+                service: toggle
+              states:
+                - state: 'on'
+                  class: 'fan-on'
+                - state: 'off'
+                  class: 'fan-off'
             - name: Garage
               entities:
                 - cover.garage

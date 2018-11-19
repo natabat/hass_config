@@ -31,6 +31,7 @@ lights:
     - light.side_bulb
     - switch.christmas_tree_lights
     - switch.bedroom_hallway
+    - switch.nursery_light
 common_lights:
   name: Common Lights
   view: no

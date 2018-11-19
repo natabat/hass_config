@@ -1,7 +1,7 @@
-terminal:
-  title: 'Terminal'
-  icon: mdi:console
-  url: 'http://192.168.1.8:4200'
+# terminal:
+  # title: 'Terminal'
+  # icon: mdi:console
+  # url: 'http://192.168.1.8:4200'
 #editor:
 #  title: 'Editor'
 #  url: 'http://168.0.107:3000' #IP to your home assistant
