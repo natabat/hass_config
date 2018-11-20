@@ -6,3 +6,4 @@ nursery:
     - switch.nursery_fan
     - sensor.nursery_energy
     - sensor.nursery_power
+    - camera.nursery_cam

@@ -1,2 +1,6 @@
 - platform: arlo
   ffmpeg_arguments: '-pred 1 -q:v 2'
+- platform: ffmpeg
+  input: !secret nurserycam_url
+  extra_arguments: '-pred 1 -q:v 2'
+  name: nursery_cam
