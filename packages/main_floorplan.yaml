@@ -65,7 +65,7 @@ homeassistant:
                 - switch.nursery_fan
                 - switch.nursery_light
               groups:
-                  - group.common_lights
+                  - group.lights
               action:
                 service: toggle
               states:

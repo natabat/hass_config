@@ -14,8 +14,10 @@ smart_home:
       - switch.hdmi_switch_3
       - switch.ps4_command
       - switch.nursery_fan_light
+      - switch.nursery_1
     include_entities:
       - script.shut_it_down
+      - group.lights_all
       - group.lights
   entity_config:
     lock.front_door_lock:
@@ -27,6 +29,8 @@ smart_home:
     switch.garage_exterior_lights:
       display_categories: LIGHT
     switch.patio_light_switch:
+      display_categories: LIGHT
+    group.lights_all:
       display_categories: LIGHT
     group.lights:
       display_categories: LIGHT

@@ -35,6 +35,8 @@ light.side_bulb:
   icon: mdi:delete-empty
 group.lights:
   friendly_name: Lights
+group.lights_all:
+  friendly_name: All the Lights
 switch.garage_outlet_switch:
   friendly_name: Garage Outlet
   icon: mdi:power-socket-us

@@ -2,11 +2,16 @@ bedroom:
   name: Bedroom
   view: yes
   entities:
-    - light.bedroom_lights_level
-    - switch.bedroom_hallway
+    - group.bedroom_lights
     - group.alarm
     - group.going_to_bed
     - group.animals
+bedroom_lights:
+  name: Bedroom Lights
+  view: no
+  entities:
+    - light.bedroom_lights_level
+    - switch.bedroom_hallway
 going_to_bed:
   name: Going To Bed
   view: no
@@ -20,6 +25,7 @@ alarm:
   entities:
     - automation.sunrise_alarm
     - input_datetime.sunrise_alarm_time
+    - automation.morning_lights_on
     - input_datetime.morning_lights_time
 animals:
   name: Animals

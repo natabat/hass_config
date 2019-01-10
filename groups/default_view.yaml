@@ -7,7 +7,7 @@ default_view:
     - device_tracker.guest
     - binary_sensor.front_door_unlocked
     - binary_sensor.back_door_open
-    - group.lights
+    - group.lights_all
     - group.front_door
     - group.garage
     - sensor.hallway_thermostat_temperature

@@ -14,8 +14,8 @@ sunset_lights:
     - light.awkward_lights_level
     - light.kitchen_lights_level
     - light.living_lights_level
-lights:
-  name: Lights
+lights_all:
+  name: All the Lights
   view: no
   icon: mdi:blur
   entities:
@@ -32,8 +32,8 @@ lights:
     - switch.christmas_tree_lights
     - switch.bedroom_hallway
     - switch.nursery_light
-common_lights:
-  name: Common Lights
+lights:
+  name: Lights
   view: no
   entities:
     - light.awkward_lights_level
@@ -42,7 +42,6 @@ common_lights:
     - switch.entry_lights_porch
     - light.kitchen_lights_level
     - light.living_room_lights_level
-    - switch.patio_light_switch
 outdoor_holiday_lights:
   name: Outdoor Holiday Lights
   view: no

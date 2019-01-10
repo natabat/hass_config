@@ -3,13 +3,20 @@ shut_it_down:
     - service: lock.lock
       entity_id: lock.front_door_locked
     - service: homeassistant.turn_off
-      entity_id: group.lights
+      entity_id: switch.bedroom_hallway
     - service: homeassistant.turn_off
-      entity_id: switch.tv_power
+      entity_id: light.bedroom_lights_level
     # - service: input_boolean.turn_on
       # entity_id: input_boolean.door_cam_motion
     - service: cover.close_cover
       entity_id: cover.garage
+    - condition: state
+      entity_id: device_tracker.guest
+      state: 'not_home'
+    - service: homeassistant.turn_off
+      entity_id: group.lights
+    - service: homeassistant.turn_off
+      entity_id: switch.tv_power
     - condition: state
       entity_id: binary_sensor.back_door_sensor
       state: 'on'

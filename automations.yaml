@@ -21,6 +21,7 @@
     to: '''dawn'''
   condition: []
   action:
+  - delay: 00:05:00
   - data:
       entity_id: switch.patio_light_switch
     service: switch.turn_off
