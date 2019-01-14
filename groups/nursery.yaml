@@ -7,3 +7,4 @@ nursery:
     - sensor.nursery_energy
     - sensor.nursery_power
     - camera.nursery_cam
+    - media_player.nursery_dot

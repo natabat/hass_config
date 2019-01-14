@@ -35,6 +35,11 @@ input_datetime: !include datetimes.yaml
 #input_number: !include numbers.yaml
 intent_script: !include alexa_intents.yaml
 light: !include lights.yaml
+media_player:
+  - platform: alexa
+    email: !secret amazon_email
+    password: !secret amazon_password
+    url: amazon.com
 nest:
   client_id: !secret nest_id
   client_secret: !secret nest_secret
