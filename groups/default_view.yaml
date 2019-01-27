@@ -1,5 +1,5 @@
-default_view:
-  name: Main
+old_default_view:
+  name: Old Main
   view: yes
   entities:
     - device_tracker.natalie

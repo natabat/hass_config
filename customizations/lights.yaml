@@ -46,3 +46,7 @@ switch.nursery_light:
   icon: mdi:baby
 switch.nursery_fan:
   icon: mdi:fan
+switch.bedroom_hallway:
+  icon: mdi:door
+group.bedroom_lights_level:
+  icon: mdi:lightbulb

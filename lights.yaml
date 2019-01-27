@@ -1,3 +1,9 @@
 - platform: tplink
   host: 192.168.1.54
   name: Side Bulb
+- platform: group
+  name: Common Lights
+  entities:
+    - light.awkward_lights_level
+    - light.kitchen_lights_level
+    - light.living_room_lights_level
