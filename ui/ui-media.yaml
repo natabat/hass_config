@@ -1,0 +1,183 @@
+- type: custom:vertical-stack-in-card
+  cards:
+    # power/find remote
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: switch.tv_power
+          tap_action:
+            action: toggle
+        - type: entity-button
+          name: " "
+          entity: switch.tv_power
+          icon: mdi:none
+        - type: entity-button
+          name: " "
+          entity: script.find_remote
+          icon: mdi:remote
+          tap_action:
+            action: call-service
+            service: script.find_remote
+    # back/up/home
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: script.roku_back
+          icon: mdi:arrow-left-thick
+          tap_action:
+            action: call-service
+            service: script.roku_back
+        - type: entity-button
+          name: " "
+          entity: script.roku_up
+          icon: mdi:arrow-up-bold-box
+          tap_action:
+            action: call-service
+            service: script.roku_up
+        - type: entity-button
+          name: " "
+          entity: script.roku_home
+          icon: mdi:home-outline
+          tap_action:
+            action: call-service
+            service: script.roku_home
+    # left/ok/right
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: script.roku_left
+          icon: mdi:arrow-left-bold-box
+          tap_action:
+            action: call-service
+            service: script.roku_left
+        - type: entity-button
+          name: " "
+          entity: script.roku_ok
+          icon: mdi:checkbox-marked
+          tap_action:
+            action: call-service
+            service: script.roku_ok
+        - type: entity-button
+          name: " "
+          entity: script.roku_right
+          icon: mdi:arrow-right-bold-box
+          tap_action:
+            action: call-service
+            service: script.roku_right
+    # replay/down/play
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: script.roku_replay
+          icon: mdi:replay
+          tap_action:
+            action: call-service
+            service: script.roku_replay
+        - type: entity-button
+          name: " "
+          entity: script.roku_down
+          icon: mdi:arrow-down-bold-box
+          tap_action:
+            action: call-service
+            service: script.roku_down
+        - type: entity-button
+          name: " "
+          entity: script.roku_play
+          icon: mdi:play
+          tap_action:
+            action: call-service
+            service: script.roku_play
+    # volume
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: switch.stereo_mute
+          icon: mdi:volume-mute
+          tap_action:
+            action: toggle
+        - type: entity-button
+          name: " "
+          entity: script.volume_down
+          icon: mdi:volume-minus
+          tap_action:
+            action: call-service
+            service: script.volume_down
+        - type: entity-button
+          name: " "
+          entity: script.volume_up
+          icon: mdi:volume-plus
+          tap_action:
+            action: call-service
+            service: script.volume_up
+    # streaming services
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: switch.netflix
+          icon: mdi:netflix
+          tap_action:
+            action: toggle
+        - type: entity-button
+          name: " "
+          entity: switch.hulu
+          icon: mdi:hulu
+          tap_action:
+            action: toggle
+        - type: entity-button
+          name: " "
+          entity: switch.prime
+          icon: mdi:amazon
+          tap_action:
+            action: toggle
+    # consoles
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: script.nintendo_switch
+          icon: mdi:nintendo-switch
+          tap_action:
+            action: call-service
+            service: script.nintendo_switch
+        - type: entity-button
+          name: " "
+          entity: switch.ps4
+          icon: mdi:playstation
+          tap_action:
+            action: toggle
+        - type: entity-button
+          name: " "
+          entity: script.snes
+          icon: mdi:gamepad
+          tap_action:
+            action: call-service
+            service: script.snes
+    # steam/antenna
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          name: " "
+          entity: script.steam
+          icon: mdi:steam
+          tap_action:
+            action: call-service
+            service: script.steam
+        - type: entity-button
+          name: " "
+          entity: switch.tv_power
+          icon: mdi:none
+        - type: entity-button
+          name: " "
+          entity: script.broadcast
+          icon: mdi:radio-tower
+          tap_action:
+            action: call-service
+            service: script.broadcast
+- type: media-control
+  entity: media_player.living_room_dot

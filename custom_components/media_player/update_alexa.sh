@@ -1,2 +1,2 @@
 rm alexa.py
-wget https://raw.githubusercontent.com/keatontaylor/custom_components/master/media_player/alexa.py
+wget -q https://raw.githubusercontent.com/keatontaylor/custom_components/master/media_player/alexa.py -O alexa.py

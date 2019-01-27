@@ -1,0 +1,50 @@
+- type: vertical-stack
+  cards:
+    - type: entity-button
+      entity: script.shut_it_down
+      icon: mdi:power-sleep
+      name: Good night
+      tap_action:
+        action: call-service
+        service: script.shut_it_down
+    - type: horizontal-stack
+      name: Lights
+      cards:
+        - type: entity-button
+          entity: group.bedroom_lights
+          name: Lights
+          icon: mdi:lightbulb
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info 
+        - type: entity-button
+          entity: light.bedroom_lights_level
+          name: Room
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info    
+        - type: entity-button
+          entity: switch.bedroom_hallway
+          name: Hallway
+          tap_action:
+            action: toggle
+    - type: entities
+      title:  Morning
+      show_header_toggle: false
+      entities:
+        - automation.sunrise_alarm
+        - entity: input_datetime.sunrise_alarm_time
+          type: custom:time-input-row
+        - automation.morning_lights_on
+        - entity: input_datetime.morning_lights_time
+          type: custom:time-input-row
+    - type: media-control
+      entity: media_player.bedroom_dot
+    - type: entity-button
+      entity: switch.feeder
+      icon: mdi:cat
+      tap_action:
+        action: toggle
+

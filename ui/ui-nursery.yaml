@@ -1,0 +1,16 @@
+- type: vertical-stack
+  cards:
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: switch.nursery_light
+          name: Nursery
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.nursery_fan
+          name: Nursery Fan
+          tap_action:
+            action: toggle
+    - type: media-control
+      entity: media_player.nursery_dot

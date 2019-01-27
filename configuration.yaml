@@ -77,6 +77,8 @@ http:
   ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
   base_url: fiddlersgreen.duckdns.org:8123
 logbook:
+lovelace:
+  mode: yaml
 python_script:
 recorder:
   db_url: !secret db_url

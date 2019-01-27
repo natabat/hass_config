@@ -1,0 +1,30 @@
+title: Fiddler's Green
+resources:
+  - url: /local/vertical-stack-in-card.js?v=0.0.9
+    type: js
+  - url: /local/time-input-row.js?v=0
+    type: js
+views:
+  - title: Main
+    path: main
+    icon: mdi:home
+    badges:
+      - device_tracker.natalie
+      - device_tracker.cassidy
+      - binary_sensor.front_door_unlocked
+      - binary_sensor.back_door_open
+      - binary_sensor.garage_door_open
+    cards: !include ui/ui-main.yaml
+  - title: Bedroom
+    path: bedroom
+    icon: mdi:hotel
+    cards: !include ui/ui-bedroom.yaml
+  - title: Media
+    path: media
+    icon: mdi:television-classic
+    cards: !include ui/ui-media.yaml
+  - title: Nursery
+    path: nursery
+    icon: mdi:baby
+    cards: !include ui/ui-nursery.yaml
+

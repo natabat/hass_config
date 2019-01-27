@@ -1,0 +1,120 @@
+- type: custom:vertical-stack-in-card
+  cards:
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: script.shut_it_down
+          icon: mdi:power-sleep
+          name: Good night
+          tap_action:
+            action: call-service
+            service: script.shut_it_down
+        - type: entity-button
+          entity: cover.garage
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.tv_power
+          tap_action:
+            action: toggle
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: light.common_lights
+          icon: mdi:lightbulb
+          name: Common
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - type: entity-button
+          entity: light.kitchen_lights_level
+          name: Kitchen
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - type: entity-button
+          entity: light.awkward_lights_level
+          name: Awkward
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - type: entity-button
+          entity: light.living_room_lights_level
+          name: Living
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+        - type: entity-button
+          entity: light.dining_room_lights_level
+          name: Dining
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: group.bedroom_lights
+          name: Bedroom (All)
+          icon: mdi:bed-empty
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info 
+        - type: entity-button
+          entity: light.bedroom_lights_level
+          name: Bedroom
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info    
+        - type: entity-button
+          entity: switch.bedroom_hallway
+          name: Hallway
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.nursery_light
+          name: Nursery
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.nursery_fan
+          name: Nursery Fan
+          tap_action:
+            action: toggle
+    - type: horizontal-stack
+      cards:
+        - type: entity-button
+          entity: switch.entry_lights_porch
+          name: Porch
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.entry_lights_door
+          name: Door
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.patio_light_switch
+          name: Patio
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: switch.garage_exterior_lights
+          name: Exterior
+          tap_action:
+            action: toggle
+        - type: entity-button
+          entity: light.side_bulb
+          name: Trash
+          tap_action:
+            action: toggle
+          hold_action:
+            action: more-info
+    - type: thermostat
+      entity: climate.hallway
