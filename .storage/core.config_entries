@@ -38,6 +38,15 @@
                 "source": "user",
                 "title": "IFTTT Webhook",
                 "version": 1
+            },
+            {
+                "connection_class": "local_push",
+                "data": {},
+                "domain": "cast",
+                "entry_id": "c42adb459f2f4257a766fafb93dda52a",
+                "source": "discovery",
+                "title": "Google Cast",
+                "version": 1
             }
         ]
     },

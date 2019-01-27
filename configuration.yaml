@@ -87,13 +87,13 @@ sun:
 updater:
 
 logger:
-  default: error
-  logs:
-    pyarlo: error
-    pyHS100: error
-    homeassistant.components.zwave.util: error
-    libopenzwave: error
-    openzwave: error
-    sseclient: error
-    homeassistant.components.websocket_api: error
-    homeassistant.components.device_tracker.unifi_direct: error
+  default: info
+  # logs:
+    # pyarlo: error
+    # pyHS100: error
+    # homeassistant.components.zwave.util: error
+    # libopenzwave: error
+    # openzwave: error
+    # sseclient: error
+    # homeassistant.components.websocket_api: error
+    # homeassistant.components.device_tracker.unifi_direct: error
