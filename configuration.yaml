@@ -87,7 +87,7 @@ sun:
 updater:
 
 logger:
-  default: info
+  default: error
   # logs:
     # pyarlo: error
     # pyHS100: error
