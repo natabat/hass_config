@@ -10,8 +10,11 @@
             action: toggle
         - type: entity-button
           name: " "
-          entity: switch.tv_power
-          icon: mdi:none
+          entity: script.roku_play
+          icon: mdi:play
+          tap_action:
+            action: call-service
+            service: script.roku_play
         - type: entity-button
           name: " "
           entity: script.find_remote
@@ -87,10 +90,10 @@
         - type: entity-button
           name: " "
           entity: script.roku_play
-          icon: mdi:play
+          icon: mdi:asterisk
           tap_action:
             action: call-service
-            service: script.roku_play
+            service: rest_command.roku_info
     # volume
     - type: horizontal-stack
       cards:

@@ -55,3 +55,6 @@ roku_replay:
 roku_play:
   url: 'http://192.168.1.24:8060/keypress/Play'
   method: 'post'
+roku_info:
+  url: 'http://192.168.1.24:8060/keypress/Info'
+  method: 'post'
