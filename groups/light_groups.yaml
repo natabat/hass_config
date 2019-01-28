@@ -6,14 +6,6 @@ morning_lights:
     - light.awkward_lights_level
     - switch.entry_lights_door
     - light.kitchen_lights_level
-sunset_lights:
-  name: Sunset Lights
-  view: no
-  icon: mdi:blur
-  entities:
-    - light.awkward_lights_level
-    - light.kitchen_lights_level
-    - light.living_lights_level
 lights_all:
   name: All the Lights
   view: no
