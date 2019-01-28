@@ -6,6 +6,10 @@ morning_lights:
     - light.awkward_lights_level
     - switch.entry_lights_door
     - light.kitchen_lights_level
+sunset_lights:
+  view: no
+  entities:
+    - light.common_lights
 lights_all:
   name: All the Lights
   view: no

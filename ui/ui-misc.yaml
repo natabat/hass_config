@@ -1,0 +1,28 @@
+- type: vertical-stack
+  cards:
+  - type: entity-button
+    entity: input_boolean.guest_present
+    name: Guest Mode
+    icon: mdi:home-account
+    tap_action:
+      action: toggle
+  - type: entities
+    name: Lock Codes
+    entities:
+      - input_select.lock_code_edit
+      - input_text.lock_slot_edit_name
+      - input_text.lock_slot_edit_hint
+      - input_text.lock_slot_edit_code
+      - script.generate_random_code
+      - script.set_selected_code
+  - type: horizontal-stack
+    cards:
+      - type: gauge
+        entity: sensor.battery_level_door_cam
+        name: Camera
+      - type: gauge
+        entity: sensor.front_door_lock_battery
+        name: Front Door
+      - type: gauge
+        entity: sensor.back_door_sensor_battery
+        name: Back Door

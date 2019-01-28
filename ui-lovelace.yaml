@@ -27,4 +27,7 @@ views:
     path: nursery
     icon: mdi:baby
     cards: !include ui/ui-nursery.yaml
-
+  - title: Misc
+    path: misc
+    icon: mdi:auto-fix
+    cards: !include ui/ui-misc.yaml

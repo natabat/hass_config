@@ -27,7 +27,7 @@ camera: !include camera.yaml
 cover: !include covers.yaml
 device_tracker: !include device_tracker.yaml
 device_sun_light_trigger:
-  light_group: light.common_lights
+  light_group: group.sunset_lights
   device_group: group.anyone
 group: !include_dir_merge_named groups/
 input_boolean: !include booleans.yaml
