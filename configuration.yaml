@@ -65,7 +65,7 @@ frontend:
   extra_html_url:
     - /local/custom_ui/state-card-tiles.html
     - /local/custom_ui/state-card-floorplan.html
-history:
+#history:
 http:
   api_password: !secret http_password
   trusted_networks:
@@ -76,7 +76,7 @@ http:
   ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
   ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
   base_url: fiddlersgreen.duckdns.org:8123
-logbook:
+#logbook:
 lovelace:
   mode: yaml
 python_script:
@@ -90,7 +90,10 @@ updater:
 
 logger:
   default: error
-  # logs:
+  logs:
+    homeassistant.components.sensor.rest: critical
+    homeassistant.components.wemo: critical
+    #homeassistant.components.media_player: debug
     # pyarlo: error
     # pyHS100: error
     # homeassistant.components.zwave.util: error
