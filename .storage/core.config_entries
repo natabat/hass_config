@@ -12,6 +12,7 @@
                 },
                 "domain": "nest",
                 "entry_id": "7be959ab9a0e4f8dbd98f66dff65c5ee",
+                "options": {},
                 "source": "import",
                 "title": "Nest (import from configuration.yaml)",
                 "version": 1
@@ -24,6 +25,7 @@
                 },
                 "domain": "zwave",
                 "entry_id": "b4d67e2163884aeebad483fc23a8e61d",
+                "options": {},
                 "source": "import",
                 "title": "Z-Wave (import from configuration.yaml)",
                 "version": 1
@@ -35,6 +37,7 @@
                 },
                 "domain": "ifttt",
                 "entry_id": "90700400a4f94e91ac83c7e381fdcd8f",
+                "options": {},
                 "source": "user",
                 "title": "IFTTT Webhook",
                 "version": 1
@@ -44,8 +47,19 @@
                 "data": {},
                 "domain": "cast",
                 "entry_id": "c42adb459f2f4257a766fafb93dda52a",
+                "options": {},
                 "source": "discovery",
                 "title": "Google Cast",
+                "version": 1
+            },
+            {
+                "connection_class": "local_poll",
+                "data": {},
+                "domain": "tplink",
+                "entry_id": "2f741e19a69a41ae9402628dabb29d5c",
+                "options": {},
+                "source": "user",
+                "title": "TP-Link Smart Home",
                 "version": 1
             }
         ]

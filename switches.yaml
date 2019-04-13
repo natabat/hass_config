@@ -30,10 +30,10 @@
       friendly_name: 'SNES HDMI'
       command_on: 'JgBoAAABMZQTExQSExIUEhQSFBIUEhM3FDcUNhM4FDYTOBQ2FDcUERURFDcUERQSFBIUEhMTExIUNxQSEzcTOBQ2FDcTNxQ2FAAFKAABL0sUAAxvAAEwSRQADG8AAS9LEwAMcAABMEoTAA0F'
       command_off: 'JgBoAAABMZQTExQSExIUEhQSFBIUEhM3FDcUNhM4FDYTOBQ2FDcUERURFDcUERQSFBIUEhMTExIUNxQSEzcTOBQ2FDcTNxQ2FAAFKAABL0sUAAxvAAEwSRQADG8AAS9LEwAMcAABMEoTAA0F'
-- platform: tplink
-  name: Stereo Plug
-  host: 10.10.10.5
-  enable_leds: false
+#- platform: tplink
+#  name: Stereo Plug
+#  host: 10.10.10.5
+#  enable_leds: false
 - platform: command_line
   switches:
     tv_power:

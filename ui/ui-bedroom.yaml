@@ -40,8 +40,6 @@
         - automation.morning_lights_on
         - entity: input_datetime.morning_lights_time
           type: custom:time-input-row
-    - type: media-control
-      entity: media_player.bedroom_dot
     - type: entity-button
       entity: switch.feeder
       icon: mdi:cat

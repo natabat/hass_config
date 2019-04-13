@@ -15,7 +15,6 @@ default_view:
     - sensor.home_weather_apparent_temperature
     - group.climate
     - group.other_view
-    - media_player.living_room_dot
 climate:
   name: Climate
   view: no

@@ -1,6 +1,6 @@
-- platform: tplink
-  host: 192.168.1.54
-  name: Side Bulb
+#- platform: tplink
+#  host: 192.168.1.54
+#  name: Side Bulb
 - platform: group
   name: Common Lights
   entities:

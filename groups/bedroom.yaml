@@ -5,8 +5,6 @@ bedroom:
     - group.bedroom_lights
     - group.alarm
     - group.going_to_bed
-    - group.animals
-    - media_player.bedroom_dot
 bedroom_lights:
   name: Bedroom Lights 
   view: no

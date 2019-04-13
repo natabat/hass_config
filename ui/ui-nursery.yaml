@@ -12,5 +12,3 @@
           name: Nursery Fan
           tap_action:
             action: toggle
-    - type: media-control
-      entity: media_player.nursery_dot

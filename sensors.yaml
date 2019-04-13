@@ -101,11 +101,11 @@
 - platform: time_date
   display_options:
     - 'time'
-- platform: steam_online
-  api_key: !secret steam_api
-  accounts:
-    - !secret cassidy_steam
-    - !secret natalie_steam
+#- platform: steam_online
+#  api_key: !secret steam_api
+#  accounts:
+#    - !secret cassidy_steam
+#    - !secret natalie_steam
 - platform: darksky
   api_key: !secret darksky_key
   name: home_weather
