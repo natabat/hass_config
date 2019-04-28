@@ -7,7 +7,13 @@ homeassistant:
   time_zone: !secret home_time_zone
   
   auth_providers:
-   - type: homeassistant
+    - type: homeassistant
+    - type: trusted_networks
+      trusted_networks:
+        - 192.168.1.0/24
+        - 20.20.20.0/24
+        - 127.0.0.1
+        - ::1
    #- type: legacy_api_password
 
   customize: !include_dir_merge_named customizations
@@ -67,12 +73,6 @@ frontend:
     - /local/custom_ui/state-card-floorplan.html
 #history:
 http:
-  #api_password: !secret http_password
-  trusted_networks:
-    - 192.168.1.0/24
-    - 20.20.20.0/24
-    - 127.0.0.1
-    - ::1
   ssl_certificate: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/fullchain.pem
   ssl_key: /home/homeassistant/dehydrated/certs/fiddlersgreen.duckdns.org/privkey.pem
   base_url: fiddlersgreen.duckdns.org:8123
@@ -91,9 +91,9 @@ updater:
 logger:
   default: error
   logs:
-    homeassistant.components.sensor.rest: critical
     homeassistant.components.wemo: critical
     homeassistant.components.switch.command_line: critical
+    homeassistant.components.rest.sensor: critical
     #homeassistant.helpers.entity: critical
     #homeassistant.components.media_player: debug
     # pyarlo: error

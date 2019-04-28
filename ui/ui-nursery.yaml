@@ -12,3 +12,6 @@
           name: Nursery Fan
           tap_action:
             action: toggle
+    - type: picture-entity
+      entity: camera.nursery_cam
+      camera_view: live
