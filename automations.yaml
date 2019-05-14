@@ -41,3 +41,14 @@
   - data:
       entity_id: switch.ps4_command
     service: switch.turn_off
+- id: '1556493468034'
+  alias: Porch Light Off In Morning
+  trigger:
+  - entity_id: sensor.period_of_day
+    platform: state
+    to: day
+  condition: []
+  action:
+  - data:
+      entity_id: switch.entry_lights_porch
+    service: switch.turn_off

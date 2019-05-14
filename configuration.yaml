@@ -64,8 +64,8 @@ config:
 discovery:
   ignore:
     - roku
-ffmpeg:
-  ffmpeg_bin: /usr/bin/ffmpeg
+#ffmpeg:
+#  ffmpeg_bin: /usr/bin/ffmpeg
 frontend:
   javascript_version: latest
   extra_html_url:
@@ -94,6 +94,7 @@ logger:
     homeassistant.components.wemo: critical
     homeassistant.components.switch.command_line: critical
     homeassistant.components.rest.sensor: critical
+    homeassistant.components.command_line.switch: critical   
     #homeassistant.helpers.entity: critical
     #homeassistant.components.media_player: debug
     # pyarlo: error

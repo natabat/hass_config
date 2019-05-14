@@ -17,6 +17,15 @@
       - script.set_selected_code
   - type: horizontal-stack
     cards:
+      - type: entity-button
+        entity: switch.doorbell_switch
+        icon: mdi:bell-ring
+        tap_action:
+          action: toggle
+      - type: entity-button
+        entity: lock.front_door_locked
+  - type: horizontal-stack
+    cards:
       - type: gauge
         entity: sensor.battery_level_door_cam
         name: Camera
